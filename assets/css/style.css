@@ -1,5 +1,5 @@
 .container {
-   max-width: 960px;
+   /* max-width: 960px; */
    margin: 0 auto;
    background: #f9f9f9;
    font-size: 24px;
@@ -26,7 +26,12 @@
 .energy {
     text-align: center;
     font-size: 100px;
-    color: #ff0000;
+    color: #084d0d;
+}
+
+.titlelogo {
+    color: #064106;
+    font-size: 40px;
 }
 
 .title {
