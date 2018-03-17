@@ -78,38 +78,6 @@ body, html {
     }
 }
 
-/*navbar
-
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-/*
-.navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.navbar a:hover {
-  background: #ddd;
-  color: black;
-}
-
-.main {
-  padding: 16px;
-  margin-bottom: 30px;
-  height: 1500px; 
-} */
-
 /* general styles */
 html, body {
     height: 100%;
@@ -150,8 +118,13 @@ html, body {
   }
   #services {
     background-color: #306d9f;
-    color: #ffffff;
+    color: #306d9f;
   }
+
+  #productTitle {
+      color: #FFFFFF;
+  }
+
   #services .glyphicon {
     border: 2px solid #FFFFFF;
     border-radius: 50%;
@@ -189,4 +162,11 @@ html, body {
   }
   footer .glyphicon:hover {
     color: #306d9f;
+  }
+
+  /*energy form -section two - services/products */
+
+  #energyForm {
+      width: 75%;
+      margin: auto;
   }
