@@ -1,57 +1,80 @@
-.container {
-   /* max-width: 960px; */
-   margin: 0 auto;
-   background: #f9f9f9;
-   font-size: 24px;
-   padding: 25px;
-}
-
-/* .parallax {
-    background: url("../images/houston1.jpg") no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 500px;
-} */
-
-.parallax {
-    min-height: 500px;
-    background: transparent;
-}
-
-.parallax2 {
-    min-height: 500px;
-    background: transparent;
-}
-
-.energy {
-    text-align: center;
-    font-size: 100px;
-    color: #084d0d;
-}
-
-.titlelogo {
-    color: #064106;
-    font-size: 40px;
-}
-
-.title {
-    color: green;
-}
-
 body, html {
     height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
 }
 
-/* .parallax {
-    /* The image used */
-    /* background-image: url("./assets/images/houston1.jpg");
-
-    /* Full height */
-    /* height: 100%;  */
-
-    /* Create the parallax scrolling effect */
-    /* background-attachment: fixed;
+.pimg1, .pimg2, .pimg3 {
+    position: relative;
+    opacity: 0.70;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
-/* } */ 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* if you want to remove effect, you can switch fixed to scroll*/
+}
+
+.pimg1 {
+    background-image: url("../images/houston1.jpg");
+    /* background-repeat: no-repeat; */
+    min-height: 100%;
+}
+
+.pimg2 {
+    background-image: url("../images/houston2.jpg");
+    min-height: 400px;
+}
+
+.pimg3 {
+    background-image: url("../images/houston2.jpg");
+    min-height: 400px;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark {
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+
+}
+
+.ptext .border.trans{
+    background-color: transparent;
+}
+
+@media screen and (max-width: 568px) {
+    .pimg1 .pimg2 .pimg3{
+        background-attachment: scroll;
+    }
+}
+
