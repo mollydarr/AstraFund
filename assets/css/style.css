@@ -18,6 +18,10 @@ body, html {
 
     /* if you want to remove effect, you can switch fixed to scroll*/
 }
+/* #snehabio {
+    height: 250px;
+    width: 250px;
+} */
 
 .pimg1 {
     background-image: url("../images/houston1.jpg");
@@ -26,7 +30,7 @@ body, html {
 }
 
 .pimg2 {
-    background-image: url("../images/houston2.jpg");
+    background-image: url("../images/picture1.jpeg");
     min-height: 400px;
 }
 
@@ -170,3 +174,104 @@ html, body {
       width: 75%;
       margin: auto;
   }
+
+  /* Meet the team code BEGINS */
+  
+  .hover-bio-wrapper {
+    position: relative;
+    color: rgba(0,0,0,0);
+    width: 100%
+}
+ 
+figure.hover-bio img{
+    display: block;
+}
+ 
+figure.hover-bio {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    line-height: 0;
+     
+}
+ 
+figure.hover-bio::before, figure.hover-bio::after{
+    position: absolute;
+    background: black;
+            opacity: 0.3;
+            content: '';
+    height: 100%;
+            width: 100%;
+    display: block;
+    top: 0;
+    left 0;
+    -moz-transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    -moz-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+}
+ 
+figure.hover-bio figcaption{
+    position: absolute;
+    background: #fff;
+            display: block;
+    line-height: 1.7em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 10px;
+    z-index: 100;
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    top: 50%;
+    left: 0;
+    -moz-transform: translate3d(-100%, -50%, 0);
+    -webkit-transform: translate3d(-100%, -50%, 0);
+    transform: translate3d(-100%, -50%, 0);
+    opacity: 0;
+    -moz-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+}
+ 
+figure.hover-bio img{
+    -moz-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -moz-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+}
+ 
+figure.hover-bio figcaption{
+    top: 100%;
+    opacity: 1;
+    -moz-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+ 
+figure.hover-bio:hover img {
+            opacity: .5;
+}
+ 
+figure.hover-bio:hover figcaption{
+    background-color: #E91E63;
+    color: #fff;
+            opacity: .9;
+    -moz-transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    -moz-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+            box-shadow: 0px -2px 28px rgba(255,255,255, 0.3);
+}
+
+/* Meet the Team Code ENDS */
