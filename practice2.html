@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 20px;
+    }
+
+    #vis {
+        margin-bottom: 1em;
+    }
+</style>
+
+<body>
+    <h1> D3 Hello World</h1>
+
+    <div id="vis"></div>
+
+    <script> 
+        var svg = d3.select("#vis")
+            .append("svg");
+
+            var w = 500, h=100;
+
+            svg.attr("width",function(){
+                return 500;
+            })
+            .attr("height",h);
+
+            svg.append("rect")
+            .attr("x",100)
+            .attr("y",20)
+            .attr("width",20)
+            .attr("height",80);
+
+    </script>
+</body>
+
+</html>
