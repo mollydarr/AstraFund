@@ -64,78 +64,107 @@
     </nav>
 
 
-<div id="home">
-    <div class="pimg1">
-        <div class="ptext">
-            <span class="border trans">
-                Parallax Website
-            </span>
-        </div>
-    </div>
-</div>
-
-<div id="about">
-    <section class - "section section-light">
-        <h2> Section One</h2>
-        <p>Lorem Ipsum some paragraph. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-            has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.</p>
-    </section>
-
-
-    <div class="pimg2">
-        <div class="ptext">
-            <span class="border trans">
-                Image 2 Text
-            </span>
+    <div id="home">
+        <div class="pimg1">
+            <div class="ptext">
+                <span class="border trans">
+                    Parallax Website
+                </span>
+            </div>
         </div>
     </div>
 
-</div>
+    <div id="about">
+        <section class - "section section-light">
+            <h2> Section One</h2>
+            <p>Lorem Ipsum some paragraph. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+                the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </section>
 
-<div id="services">
 
-    <section class - "section section-dark">
-        <h2 id="productTitle"> Services/Product </h2>
-    
+        <div class="pimg2">
+            <div class="ptext">
+                <span class="border trans">
+                    Image 2 Text
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="services">
+
+        <section class - "section section-dark">
+            <h2 id="productTitle"> Services/Product </h2>
+
             <!-- Train Form Input -->
-        <div id="energyForm">
-            <div class="row">
+            <div id="energyForm">
+                <div class="row">
                     <div class="col-lg-12">
-                      <div class="panel panel-primary">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Add Your Monthly Energy Consumption</h3>
+                            </div>
+                            <div class="panel-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="userName-input">Name</label>
+                                        <input class="table-input" id="userName-input" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="date-input">Date</label>
+                                        <input class="table-input" id="date-input" type="date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="zipcode-input">Zipcode</label>
+                                        <input class="table-input" id="zipcode-input" type="number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="energy-input">Energy Consumption</label>
+                                        <input class="table-input" id="energy-input" type="number">
+                                    </div>
+                                    <button class="btn btn-primary" id="submit-button" type="submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end train form input-->
+
+            <!-- Train Table -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
-                          <h3 class="panel-title">Add Your Monthly Energy Consumption</h3>
+                            <h3 class="panel-title">Current Train Schedule</h3>
                         </div>
                         <div class="panel-body">
-                          <form>
-                            <div class="form-group">
-                              <label for="userName-input">Name</label>
-                              <input class="table-input" id="userName-input" type="text">
-                            </div>
-                            <div class="form-group">
-                              <label for="date-input">Date</label>
-                              <input class="table-input" id="date-input" type="date"> 
-                            </div>  
-                            <div class="form-group">
-                              <label for="zipcode-input">Zipcode</label>
-                               <input class="table-input" id="zipcode-input" type="number">
-                            </div>  
-                            <div class="form-group">
-                                  <label for="energy-input">Energy Consumption</label>
-                                   <input class="table-input" id="energy-input" type="number">
-                            </div>
-                            <button class="btn btn-primary" id="submit-button" type="submit">Submit</button>
-                          </form>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Train Name</th>
+                                        <th scope="col">Destination</th>
+                                        <th scope="col">Frequency (min)</th>
+                                        <th scope="col">Next Arrival</th>
+                                        <th scope="col">Minutes Away</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="traintable">
+                                </tbody>
+                            </table>
+                            <button class="btn btn-primary" id="clear-button">Clear</button>
+
                         </div>
-                      </div>
-                    </div>  
-                  </div>
-            
+                    </div>
                 </div>
-        </div>   
+            </div>
+
+    </div>
     </section>
 
     <div class="pimg3">
@@ -145,19 +174,19 @@
             </span>
         </div>
     </div>
-</div>
+    </div>
 
 
-<div id="contact">
+    <div id="contact">
 
-    <section class - "section section-dark">
-        <h2> Section Three</h2>
-        <p>Lorem Ipsum some paragraph. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-            has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged.</p>
-    </section>
-</div>
+        <section class - "section section-dark">
+            <h2> Section Three</h2>
+            <p>Lorem Ipsum some paragraph. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                the leap into electronic typesetting, remaining essentially unchanged.</p>
+        </section>
+    </div>
 
     <div class="pimg1">
         <div class="ptext">
@@ -168,7 +197,7 @@
     </div>
 
 
-    
+
 
     <!--<div class="container">-->
     <!--<div class="navbar">
