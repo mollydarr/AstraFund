@@ -24,18 +24,18 @@ body, html {
 } */
 
 .pimg1 {
-    background-image: url("../images/houston1.jpg");
+    background-image: url("../images/space1.jpg");
     /* background-repeat: no-repeat; */
     min-height: 100%;
 }
 
 .pimg2 {
-    background-image: url("../images/picture1.jpeg");
+    background-image: url("../images/space2.jpg");
     min-height: 400px;
 }
 
 .pimg3 {
-    background-image: url("../images/houston2.jpg");
+    background-image: url("../images/space3.jpg");
     min-height: 400px;
 }
 
@@ -168,15 +168,18 @@ html, body {
     color: #306d9f;
   }
 
-  /*energy form -section two - services/products */
+  /* Asteroid form -section two - services/products */
 
-  #energyForm {
-      width: 75%;
-      margin: auto;
+  #asteroidForm {
+      /* width: 50%; */
+      /* margin: auto; */
+      /* margin-left: 20px; */
+      /* box-sizing: border-box; */
+
   }
 
   /* Meet the team code BEGINS */
-  
+
   .hover-bio-wrapper {
     position: relative;
     color: rgba(0,0,0,0);
