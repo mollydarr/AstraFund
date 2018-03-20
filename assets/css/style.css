@@ -278,3 +278,132 @@ figure.hover-bio:hover figcaption{
 }
 
 /* Meet the Team Code ENDS */
+
+/*contact form*/
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+
+.company-info ul {
+    list-style: none; 
+    padding: 0;
+}
+
+#brand {
+    text-align: center;
+}
+
+#brand span {
+    color: #306d9f;
+}
+
+.wrapper{
+    box-shadow: 0 0 20px 0 rgba(72, 94, 116,0.7);
+}
+
+.wrapper > * {
+    padding: 1em;
+}
+
+.company-info {
+    background: #c9e6ff;
+}
+
+.company-info h3, .company-info ul{
+    text-align: center;
+    margin 0 0 1rem 0;
+}
+
+.contactForm {
+    background: #f9feff; 
+}
+
+
+/*contact form styles*/
+
+.contactForm form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.contactForm form label{
+    display: block;
+}
+
+.contactForm form p {
+    margin: 0;
+}
+
+.contactForm form .full {
+    grid-column: 1 / 3;
+}
+
+.contactForm form button, .contactForm form input, .contactForm form textarea {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #c9e6ff;
+}
+
+.contactForm form button {
+    background: #c9e6ff;
+    border: 0; 
+    text-transform: uppercase;
+}
+
+.contactForm form button:hover, .contactForm form button:focus{
+    background: #92bde7;
+    color: #fff;
+    outline: 0;
+    transition: background-color 2s ease-out;
+}
+
+.asterisk {
+    color: #ff0000;
+}
+
+/*large screens*/
+
+@media(min-width: 700px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    /*all elements inside wrapper*/
+    .wrapper > *{
+        padding: 2em;
+    }
+
+    .company-info h3, .company-info ul, .brand{
+        text-align: left;
+    }
+}
+
+/*slider style*/
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 23px;
+    height: 24px;
+    border: 0;
+    background-image: url("../images/rocket.png");
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 23px;
+    height: 25px;
+    border: 0;
+    background-image: url("../images/rocket.png");
+    cursor: pointer;
+}
