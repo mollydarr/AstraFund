@@ -92,11 +92,12 @@
                 the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
                 software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </section>
+    </div>
 
 
         <!--Team Member Photos !-->
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-4">
                 <div class="hover-bio-wrapper">
                     <div class="hover-bio">
@@ -109,9 +110,9 @@
                         </figure>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- closing div tag for col-md-4 -->
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
                 <div class="hover-bio-wrapper">
                     <div class="hover-bio">
                         <figure class="hover-bio">
@@ -123,9 +124,9 @@
                         </figure>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!--closing div tag for col-md-4-->
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
                 <div class="hover-bio-wrapper">
                     <div class="hover-bio">
                         <figure class="hover-bio">
@@ -137,14 +138,14 @@
                         </figure>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- closing tag for col-md-4-->
-        </div>
+        <!-- </div> -->
         <!--closing div tag for first team member row -->
 
-        <div class="row justify-content-center">
+        <!-- <div class="row justify-content-center"> -->
             <!--Need to figure out how to center second row team member pics-->
-            <div class="col-md-6 offset-med-6">
+            <!-- <div class="col-md-6 offset-med-6">
                 <div class="hover-bio-wrapper">
                     <div class="hover-bio">
                         <figure class="hover-bio">
@@ -156,10 +157,10 @@
                         </figure>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!--cloing div tag for col-md-6 -->
 
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
                 <div class="hover-bio-wrapper">
                     <div class="hover-bio">
                         <figure class="hover-bio">
@@ -171,11 +172,11 @@
                         </figure>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- closing div tag for col-md-6-->
-        </div>
+        <!-- </div>
 
-    </div>
+    </div> -->
     <!--closing tag for row 2 of team members-->
     <div class="pimg2">
         <div class="ptext">
@@ -211,9 +212,19 @@
                                     <label for="zipcode-input">Investment Amount</label>
                                     <input class="table-input" id="zipcode-input" type="number">
                                 </div>
+                               
                                 <div class="form-group">
                                     <label for="asteroid-input">Asteroid Type</label>
-                                    <input class="table-input" id="asteroid-input" type="number">
+                                    <form action="/action_page.php">
+                                        <select name="cars">
+                                          <option value="volvo">Cg</option>
+                                          <option value="saab">T</option>
+                                          <option value="fiat">Xc</option>
+                                          <option value="audi">Audi</option>
+                                        </select>
+                                        <br><br>
+                                      </form>
+                                    <!-- <input class="table-input" id="asteroid-input" type="number"> -->
                                 </div>
                                 <button class="btn btn-primary" id="submit-button" type="submit">Submit</button>
                             </form>
@@ -299,11 +310,12 @@
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
+                                        <th></th>
                                         <th scope="col">Asteroid Name</th>
-                                        <th scope="col">Location</th>
-                                        <th scope="col">Frequency (min)</th>
-                                        <th scope="col">Next Arrival</th>
-                                        <th scope="col">Minutes Away</th>
+                                        <th scope="col">Value of Asteroid</th>
+                                        <th scope="col">Upcoming Approach</th>
+                                        <th scope="col">Value Per Share</th>
+                                        <th scope="col">Shares you can invest in</th>
                                     </tr>
                                 </thead>
                                 <tbody id="asteroidtable">
@@ -332,6 +344,105 @@
     </div>
     </div>
 
+<div id="team" class="container">
+
+     <!--Team Member Photos !-->
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="hover-bio-wrapper">
+                    <div class="hover-bio">
+                        <figure class="hover-bio">
+                            <img src="./assets/images/snehaHeadEdited.jpg">
+                            <figcaption>
+                                <h2>BRANT CAMPODONICO</h2>
+                                <p>BACK-END DEV</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!-- closing div tag for col-md-4 -->
+            <div class="col-md-4">
+                <div class="hover-bio-wrapper">
+                    <div class="hover-bio">
+                        <figure class="hover-bio">
+                            <img src="./assets/images/mollyHeadEdited.jpeg">
+                            <figcaption>
+                                <h2>MOLLY COUGILL</h2>
+                                <p>BACK-END DEV</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!--closing div tag for col-md-4-->
+            <div class="col-md-4">
+                <div class="hover-bio-wrapper">
+                    <div class="hover-bio">
+                        <figure class="hover-bio">
+                            <img src="./assets/images/addisHead.jpeg">
+                            <figcaption>
+                                <h2>ADDIS CASCO</h2>
+                                <p>FRONT-END DEV</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!-- closing tag for col-md-4-->
+        </div>
+        <!--closing div tag for first team member row -->
+
+        <div class="row justify-content-center">
+            <!--Need to figure out how to center second row team member pics-->
+            <div class="col-md-6 offset-med-6">
+                <div class="hover-bio-wrapper">
+                    <div class="hover-bio">
+                        <figure class="hover-bio">
+                            <img src="./assets/images/snehaHeadEdited.jpg">
+                            <figcaption>
+                                <h2>KEELY BRENNAN</h2>
+                                <p>BACK-END DEV</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!--cloing div tag for col-md-6 -->
+
+            <div class="col-md-6">
+                <div class="hover-bio-wrapper">
+                    <div class="hover-bio">
+                        <figure class="hover-bio">
+                            <img src="./assets/images/snehaHeadEdited.jpg">
+                            <figcaption>
+                                <h2>SNEHA DAMA</h2>
+                                <p>FRONT-END DEV</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!-- closing div tag for col-md-6-->
+        </div>
+
+    </div>
+    <!--closing tag for row 2 of team members-->
+</div>
+
+
+
+
+
+    <div class="pimg2">
+            <div class="ptext">
+                <span class="border trans">
+                    Image 2 Text
+                </span>
+            </div>
+    </div>
+
 
     <div id="contact" class="container">
 
@@ -340,7 +451,7 @@
         </section>
     </div>
 
-    <!--contact form -->
+    <!-- contact form -->
     <div id="contact" class="container">
 
         <section class - "section section-dark">
@@ -425,6 +536,10 @@
             </span>
         </div>
     </div>
+
+
+
+    
 
 
 
