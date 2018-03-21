@@ -127,6 +127,20 @@ html, body {
     /* color: #7cabc7; */
   }
 
+  .teaminfobox {
+      height: 250px;
+      width: 250px;
+      background-color: #0059ff;
+      color: rgb(247, 240, 240); 
+      font-family: "Lato", sans-serif;
+      font-size: 23px;
+      text-align: center;
+      position: relative;
+      bottom: 20px;
+     
+
+  }
+
   #about.container {
     
     width: 100%;
@@ -274,7 +288,8 @@ figure.hover-bio:hover img {
 }
  
 figure.hover-bio:hover figcaption{
-    background-color: #E91E63;
+    /* background-color: #E91E63; */
+    background-color: #0059ff;
     color: #fff;
             opacity: .9;
     -moz-transform: translate3d(0, -100%, 0);
