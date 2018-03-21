@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    var userInput = "T";
+    var userInput = '\"T\"';
 
-    var query = "{'spec':" + userInput + "}";
+    var query = '{"spec":' + userInput + '}';
 
-    var limit = "1";
+    var limit = "6";
 
-    var url = "https://asterank.com/api/asterank?query=" + query + "&limit=" + limit;
+    var url = 'http://www.asterank.com/api/asterank?query=' + query + '&limit=' + limit;
 
     console.log("testing a branch");
     console.log(url);
