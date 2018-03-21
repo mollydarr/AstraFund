@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     var limit = "1";
 
-    var url = "http://asterank.com/api/asterank?query=" + query + "&limit=" + limit;
+    var url = "https://asterank.com/api/asterank?query=" + query + "&limit=" + limit;
 
 
     $.ajax({
