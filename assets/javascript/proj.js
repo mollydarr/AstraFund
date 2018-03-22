@@ -1,3 +1,5 @@
+
+
 $(document).ready(function () {
     var userInput = '\"T\"';
 
@@ -63,3 +65,25 @@ $(document).ready(function () {
 Plotly.newPlot('productTitle', data, layout);
 
 });
+
+/*pie chart*/
+google.charts.load("current", {packages:["corechart"]});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+    ['Task', 'Hours per Day'],
+    ['Invest1',     11],
+    ['Invest2',      2],
+    ['Invest3',  2],
+    ['Invest4', 2],
+    ['Invest5',    7]
+  ]);
+
+  var options = {
+    title: 'Investment',
+    pieHole: 0.4,
+  };
+
+  var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+  chart.draw(data, options);
+}
