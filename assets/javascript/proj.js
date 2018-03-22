@@ -19,6 +19,7 @@ $(document).ready(function () {
     });
 
     //build placeholder 
+    
     var trace1 = {
         x: [1, 2, 3, 4],
         y: [7, 8, 9, 10],
@@ -30,9 +31,20 @@ $(document).ready(function () {
         }
     };
 
+    var trace2 = {
+        x: [1, 2, 3, 4],
+        y: [9, 10, 12, 15],
+        text: ['Asteroid1', 'Asteroid2', 'Asteroid3', 'Asteroid4'],
+        mode: 'markers',
+        marker: {
+            size: [100, 250, 500, 1000],
+            sizemode: 'area'
+        }
+    };
+    
 
 
-    var data = [trace1];
+    var data = [trace1, trace2];
 
     var layout = {
         title: "THIS IS A PLACEHOLDER CHART",
@@ -40,10 +52,10 @@ $(document).ready(function () {
         height: 400,
         width: 480,
         xaxis: {
-            title: 'x Axis',
+            title: 'Price per Share',
         },
         yaxis: {
-            title: 'y Axis',
+            title: 'Estimated Profit',
         }
     };
 
