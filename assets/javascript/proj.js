@@ -9,7 +9,6 @@ $(document).ready(function () {
 
     var url = 'http://www.asterank.com/api/asterank?query=' + query + '&limit=' + limit;
 
-    console.log("testing a branch");
     console.log(url);
     $.ajax({
         url: url,
