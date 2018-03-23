@@ -3,13 +3,15 @@
 $(document).ready(function () {
     var userInput = $("#asteroid-input").val().trim();
 
-    console.log('butts');
-
     var query = '{"spec":' + userInput + '}';
 
-    var limit = "6";
+    var limit = "5";
 
     var url = 'http://www.asterank.com/api/asterank?query=' + query + '&limit=' + limit;
+
+    var database = firebase.database();
+
+    console.log(database);
 
     console.log(url);
     $.ajax({
