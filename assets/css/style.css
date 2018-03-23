@@ -163,6 +163,9 @@ html, body {
     vertical-align: middle;
     width: 140px;
   }
+  #userInputDash {
+      background-color:#dbd6d6;
+  }
   #information {
     background: url(../images/estate.jpg) no-repeat center center fixed;
     display: table;
