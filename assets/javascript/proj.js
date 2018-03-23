@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var userInput = $("#asteroid-input").val();
+    var userInput = $("#asteroid-input").val().trim();
 
     var query = '{"spec":' + userInput + '}';
 
