@@ -1,6 +1,8 @@
 $(document).ready(function () {
     var userInput = $("#asteroid-input").val().trim();
 
+    console.log('butts');
+
     var query = '{"spec":' + userInput + '}';
 
     var limit = "6";
