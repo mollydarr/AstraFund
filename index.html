@@ -140,168 +140,164 @@
     <div id="services" class="container">
 
         <section class - "section section-dark">
-            <h2 id="productTitle"> Services/Product </h2>
+            <h2 id="serviceTitle"> Services/Product </h2>
             <div class="row">
-                <!-- Asteroid Form Input -->
-                <!-- container for asteroid form-->
-                <div class="col-md-6" id="asteroidForm">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">User Input to Invest in Asteroid</h3>
-                        </div>
-                        <div class="panel-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="userName-input">Name</label>
-                                    <input class="table-input" id="userName-input" type="text">
-                                </div>
-                                <div class="form-group">
-                                    <label for="date-input">Date</label>
-                                    <input class="table-input" id="date-input" type="date">
-                                </div>
-                                <div class="form-group">
-                                    <label for="investment-input">Investment Amount</label>
-                                    <input class="table-input" id="investment-input" type="number">
-                                </div>
-                                <div class="form-group">
-                                    <label for="asteroid-input">Asteroid Type</label>
-                                    <!-- <input class="table-input" id="asteroid-input" type="number"> -->
-                                    <form action="/action_page.php">
-
-                                        <select name="cars">
-
-                                            <option value="volvo">Cg</option>
-
-                                            <option value="saab">T</option>
-
-                                            <option value="fiat">Xc</option>
-
-                                            <option value="audi">Audi</option>
-                                        </select>
-
-                                        <br>
-                                        <br> </form>
-                                </div>
-                                <button class="btn btn-primary" id="submit-button" type="submit">Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- <div class="row"> -->
-                <!-- INVESTMENT DASHBOARD-->
-                <div class="col-md-6">
+                <div class="container" id="serviceSection1">
+                    <!--MARKET TRENDS -->
+                    <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Investment Dashboard</h3>
+                                    <h3 class="panel-title">Market Trends</h3>
                                 </div>
                                 <div class="panel-body">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Asteroid Name</th>
-                                                <th scope="col">Type</th>
-                                                <th scope="col">Composition</th>
-                                                <th scope="col">Share Value</th>
-                                                <th scope="col">Percent Change</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="investDash">
-                                        </tbody>
-                                    </table>
-                                    <!--graph start-->
-                                    <div id="graph">
-                                        <div id="donutchart" style="width: 500px; height: 300px;"></div>
-                                    </div>
-                                    <button class="btn btn-primary" id="clear-button">Submit</button>
+                                    <form>
+                                        <div class="form-group">
+                                        
+                                        </div>
+                                        
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div id="productTitle"> <!--plotly-->
 
-                </div>
-                <!---->
-            </div>
+                    </div>
+                </div> <!-- close container for ServicesSection1-->
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Market Trends</h3>
+                    <!-- Asteroid Form Input -->
+                    <!-- container for asteroid form-->
+                    <div class="col-md-6" id="asteroidForm">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">User Input to Invest in Asteroid</h3>
+                            </div>
+                            <div class="panel-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="userName-input">Name</label>
+                                        <input class="table-input" id="userName-input" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="date-input">Date</label>
+                                        <input class="table-input" id="date-input" type="date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="investment-input">Investment Amount</label>
+                                        <input class="table-input" id="investment-input" type="number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="asteroid-input">Asteroid Type</label>
+                                        <!-- <input class="table-input" id="asteroid-input" type="number"> -->
+                                        <form action="/action_page.php">
+
+                                            <select name="cars">
+
+                                                <option value="cg">Cg</option>
+
+                                                <option value="t">T</option>
+
+                                                <option value="xc">Xc</option>
+
+                                                <!-- <option value="audi">Audi</option> -->
+                                            </select>
+
+                                            <br>
+                                            <br> </form>
+                                    </div>
+                                    <button class="btn btn-primary" id="userSubmit" type="submit">Submit</button>
+                                </form>
+                            </div>
                         </div>
-                        <div class="panel-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="userName-input">This Week</label>
-                                    <input class="table-input" id="userName-input" type="text">
+                    </div>
+
+
+                    <!-- <div class="row"> -->
+                    <!-- INVESTMENT DASHBOARD-->
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Investment Dashboard</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Asteroid Name</th>
+                                                    <th scope="col">Type</th>
+                                                    <th scope="col">Composition</th>
+                                                    <th scope="col">Share Value</th>
+                                                    <th scope="col">Percent Change</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="investDash">
+                                            </tbody>
+                                        </table>
+                                        <!--graph start-->
+                                        <div id="graph">
+                                            <div id="donutchart" style="width: 500px; height: 300px;"></div>
+                                        </div>
+                                     
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="date-input">Last Week</label>
-                                    <input class="table-input" id="date-input" type="date">
-                                </div>
-                                <div class="form-group">
-                                    <label for="zipcode-input">Charts</label>
-                                    <input class="table-input" id="zipcode-input" type="number">
-                                </div>
-                                <div class="form-group">
-                                    <label for="asteroid-input">Asteroid Type</label>
-                                    <input class="table-input" id="asteroid-input" type="number">
-                                </div>
-                                <button class="btn btn-primary" id="submit-button" type="submit">Submit</button>
-                            </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!---->
+                </div>
+
+
+
+
+                <!-- Asteroid form input ENDS-->
+
+                <!-- Asteroid Table BEGINS -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Asteroid List (from firebase)</h3>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Asteroid Name</th>
+                                            <th scope="col">Value</th>
+                                            <th scope="col">Profit</th>
+                                            <th scope="col">Upcoming Approach</th>
+                                            <th scope="col">I can buy x amnt of shares</th>
+                                            <th scope="col">Value per share</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="asteroidtable">
+                                    </tbody>
+                                </table>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
+        </section>
 
+        <!-- STAR TEAM PARALLAX IMAGE -->
 
-            <!-- Asteroid form input ENDS-->
-
-            <!-- Asteroid Table BEGINS -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Asteroid List (from firebase)</h3>
-                        </div>
-                        <div class="panel-body">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Asteroid Name</th>
-                                        <th scope="col">Location</th>
-                                        <th scope="col">Frequency (min)</th>
-                                        <th scope="col">Next Arrival</th>
-                                        <th scope="col">Minutes Away</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="asteroidtable">
-                                </tbody>
-                            </table>
-                            <button class="btn btn-primary" id="clear-button">Clear</button>
-                        </div>
-                    </div>
-                </div>
+        <div class="pimg3">
+            <div class="ptext">
+                <span class="border trans">
+                    THE STAR TEAM
+                </span>
+                </span>
             </div>
-
-    </div>
-
-    </section>
-
-    <!-- STAR TEAM PARALLAX IMAGE -->
-
-    <div class="pimg3">
-        <div class="ptext">
-            <span class="border trans">
-                THE STAR TEAM
-            </span>
-            </span>
         </div>
-    </div>
     </div>
     </div>
 
