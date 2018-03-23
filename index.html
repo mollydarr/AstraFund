@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 
-    <!-- add jquery -->
+    <!-- add jquery Link -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
     <!-- Latest compiled and minified CSS -->
@@ -27,9 +27,15 @@
     <!-- D3 for data visualizations -->
     <script src="https://d3js.org/d3.v4.min.js"></script>
 
+    <!-- plot.ly for data visualizations -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 </head>
 
 <body>
+    <h3>
     <!-- navigation panel -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
@@ -54,9 +60,9 @@
                     <li>
                         <a href="#services">Services</a>
                     </li>
-                    <!-- <li>
-                        <a href="#information">Information</a>
-                    </li> -->
+                    <li>
+                        <a href="#team">Team</a>
+                    </li>
                     <li>
                         <a href="#contact">Contact</a>
                     </li>
@@ -68,7 +74,7 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <!-- UPDATING CODE -->
+    <!-- FIRST PARALLAX IMAGE -->
 
     <div id="home">
         <div class="pimg1">
@@ -79,252 +85,337 @@
             </div>
         </div>
     </div>
-
+    <!--ABOUT SECTION/SPACE AND ASTEROID MINING INFO-->
     <div id="about" class="container">
         <section class - "section section-light">
-            <h2> Section One</h2>
-            <p>Lorem Ipsum some paragraph. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also
-                the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <h2> ABOUT</h2>
+
+            <!--FIRST CARD-->
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="./assets/images/mollyHeadEdited.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <h2>What?</h2>
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--END COLUMN 4-->
+            <!--SECOND CARD-->
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="./assets/images/mollyHeadEdited.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <h2>Where?</h2>
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--THIRD CARD-->
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="./assets/images/mollyHeadEdited.jpeg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <h2>How?</h2>
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-
-        <!--Team Member Photos !-->
-
-        <div class="row">
-            <div class="col-md-4">
-                <div class="hover-bio-wrapper">
-                    <div class="hover-bio">
-                        <figure class="hover-bio">
-                            <img src="./assets/images/snehaHeadEdited.jpg">
-                            <figcaption>
-                                <h2>BRANT CAMPODONICO</h2>
-                                <p>BACK-END DEV</p>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-            <!-- closing div tag for col-md-4 -->
-            <div class="col-md-4">
-                <div class="hover-bio-wrapper">
-                    <div class="hover-bio">
-                        <figure class="hover-bio">
-                            <img src="./assets/images/mollyHeadEdited.jpeg">
-                            <figcaption>
-                                <h2>MOLLY COUGILL</h2>
-                                <p>BACK-END DEV</p>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-            <!--closing div tag for col-md-4-->
-            <div class="col-md-4">
-                <div class="hover-bio-wrapper">
-                    <div class="hover-bio">
-                        <figure class="hover-bio">
-                            <img src="./assets/images/addisHead.jpeg">
-                            <figcaption>
-                                <h2>ADDIS CASCO</h2>
-                                <p>FRONT-END DEV</p>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-            <!-- closing tag for col-md-4-->
-        </div>
-        <!--closing div tag for first team member row -->
-
-        <div class="row justify-content-center">
-            <!--Need to figure out how to center second row team member pics-->
-            <div class="col-md-6 offset-med-6">
-                <div class="hover-bio-wrapper">
-                    <div class="hover-bio">
-                        <figure class="hover-bio">
-                            <img src="./assets/images/snehaHeadEdited.jpg">
-                            <figcaption>
-                                <h2>KEELY BRENNAN</h2>
-                                <p>BACK-END DEV</p>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-            <!--cloing div tag for col-md-6 -->
-
-            <div class="col-md-6">
-                <div class="hover-bio-wrapper">
-                    <div class="hover-bio">
-                        <figure class="hover-bio">
-                            <img src="./assets/images/snehaHeadEdited.jpg">
-                            <figcaption>
-                                <h2>SNEHA DAMA</h2>
-                                <p>FRONT-END DEV</p>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-            <!-- closing div tag for col-md-6-->
-        </div>
-
     </div>
-    <!--closing tag for row 2 of team members-->
+    <!--SERVICES/PRODUCT PARALLAX IMAGE-->
     <div class="pimg2">
         <div class="ptext">
             <span class="border trans">
-                Image 2 Text
+                SERVICES/PRODUCT
             </span>
         </div>
     </div>
-
+    <!--SERVICES/PRODUCT/GRAPH/USER INPUT section -->
     <div id="services" class="container">
 
         <section class - "section section-dark">
-            <h2 id="productTitle"> Services/Product </h2>
+            <h2 id="serviceTitle"> Services/Product </h2>
             <div class="row">
-                <!-- Asteroid Form Input -->
-                <!-- container for asteroid form-->
-                <div class="col-md-6" id="asteroidForm">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">User Input to Invest in Asteroid</h3>
+                <div class="container" id="serviceSection1">
+                    <!--MARKET TRENDS -->
+                    <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Market Trends</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <form>
+                                        <div class="form-group">
+                                        
+                                        </div>
+                                        
+                                    </form>
+                                </div>
+                            </div>
                         </div>
-                        <div class="panel-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="userName-input">Name</label>
-                                    <input class="table-input" id="userName-input" type="text">
+                    </div>
+                    <div id="productTitle"> <!--plotly-->
+
+                    </div>
+                </div> <!-- close container for ServicesSection1-->
+
+                    <!-- Asteroid Form Input -->
+                    <!-- container for asteroid form-->
+                    <div class="col-md-6" id="asteroidForm">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">User Input to Invest in Asteroid</h3>
+                            </div>
+                            <div class="panel-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="userName-input">Name</label>
+                                        <input class="table-input" id="userName-input" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="date-input">Date</label>
+                                        <input class="table-input" id="date-input" type="date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="investment-input">Investment Amount</label>
+                                        <input class="table-input" id="investment-input" type="number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="asteroid-input">Asteroid Type</label>
+                                        <!-- <input class="table-input" id="asteroid-input" type="number"> -->
+                                        <form action="/action_page.php">
+
+                                            <select name="cars">
+
+                                                <option value="cg">Cg</option>
+
+                                                <option value="t">T</option>
+
+                                                <option value="xc">Xc</option>
+
+                                                <!-- <option value="audi">Audi</option> -->
+                                            </select>
+
+                                            <br>
+                                            <br> </form>
+                                    </div>
+                                    <button class="btn btn-primary" id="userSubmit" type="submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- <div class="row"> -->
+                    <!-- INVESTMENT DASHBOARD-->
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Investment Dashboard</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Asteroid Name</th>
+                                                    <th scope="col">Type</th>
+                                                    <th scope="col">Composition</th>
+                                                    <th scope="col">Share Value</th>
+                                                    <th scope="col">Percent Change</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="investDash">
+                                            </tbody>
+                                        </table>
+                                        <!--graph start-->
+                                        <div id="graph">
+                                            <div id="donutchart" style="width: 500px; height: 300px;"></div>
+                                        </div>
+                                     
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="date-input">Date</label>
-                                    <input class="table-input" id="date-input" type="date">
-                                </div>
-                                <div class="form-group">
-                                    <label for="zipcode-input">Investment Amount</label>
-                                    <input class="table-input" id="zipcode-input" type="number">
-                                </div>
-                                <div class="form-group">
-                                    <label for="asteroid-input">Asteroid Type</label>
-                                    <input class="table-input" id="asteroid-input" type="number">
-                                </div>
-                                <button class="btn btn-primary" id="submit-button" type="submit">Submit</button>
-                            </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!---->
+                </div>
+
+
+
+
+                <!-- Asteroid form input ENDS-->
+
+                <!-- Asteroid Table BEGINS -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Asteroid List (from firebase)</h3>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Asteroid Name</th>
+                                            <th scope="col">Value</th>
+                                            <th scope="col">Profit</th>
+                                            <th scope="col">Upcoming Approach</th>
+                                            <th scope="col">I can buy x amnt of shares</th>
+                                            <th scope="col">Value per share</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="asteroidtable">
+                                    </tbody>
+                                </table>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
 
-
-                <!-- <div class="row"> -->
-                <div class="col-md-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Investment Dashboard</h3>
-                        </div>
-                        <div class="panel-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="userName-input">Name</label>
-                                    <input class="table-input" id="userName-input" type="text">
-                                </div>
-                                <div class="form-group">
-                                    <label for="date-input">Date</label>
-                                    <input class="table-input" id="date-input" type="date">
-                                </div>
-                                <div class="form-group">
-                                    <label for="zipcode-input">Zipcode</label>
-                                    <input class="table-input" id="zipcode-input" type="number">
-                                </div>
-                                <div class="form-group">
-                                    <label for="asteroid-input">Current Trends</label>
-                                    <input class="table-input" id="asteroid-input" type="number">
-                                </div>
-                                <button class="btn btn-primary" id="submit-button" type="submit">Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
             </div>
 
+        </section>
+
+        <!-- STAR TEAM PARALLAX IMAGE -->
+
+        <div class="pimg3">
+            <div class="ptext">
+                <span class="border trans">
+                    THE STAR TEAM
+                </span>
+                </span>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- TEAM MEMBER PHOTOS SECTION -->
+    <div id="about" class="container">
+        <section class - "section section-light">
+
+            <!--Team Member Photos !-->
+
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Market Trends</h3>
-                        </div>
-                        <div class="panel-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="userName-input">This Week</label>
-                                    <input class="table-input" id="userName-input" type="text">
-                                </div>
-                                <div class="form-group">
-                                    <label for="date-input">Last Week</label>
-                                    <input class="table-input" id="date-input" type="date">
-                                </div>
-                                <div class="form-group">
-                                    <label for="zipcode-input">Charts</label>
-                                    <input class="table-input" id="zipcode-input" type="number">
-                                </div>
-                                <div class="form-group">
-                                    <label for="asteroid-input">Asteroid Type</label>
-                                    <input class="table-input" id="asteroid-input" type="number">
-                                </div>
-                                <button class="btn btn-primary" id="submit-button" type="submit">Submit</button>
-                            </form>
+                <div class="col-md-4">
+                    <div class="hover-bio-wrapper">
+                        <div class="hover-bio">
+                            <figure class="hover-bio">
+                                <img src="./assets/images/snehaHeadEdited.jpg">
+                                <figcaption>
+                                    <h2>BRANT CAMPODONICO</h2>
+                                    <p>BACK-END DEV</p>
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
-            </div>
 
+                <!-- closing div tag for Brant pic -->
 
+                <div class="col-md-4">
+                    <h1 class="teaminfobox">
+                        AstraFund's team is dedicated to bringing you one step closer to the stars by ensuring that you are in safe hands while making
+                        your financial investment. Take the Aster-risk with AstraFund.
+                    </h1>
+                </div>
+                <!--closing div tag for Team info box-->
 
-            <!-- Asteroid form input ENDS-->
-
-            <!-- Asteroid Table BEGINS -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Asteroid List (from firebase)</h3>
-                        </div>
-                        <div class="panel-body">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Asteroid Name</th>
-                                        <th scope="col">Location</th>
-                                        <th scope="col">Frequency (min)</th>
-                                        <th scope="col">Next Arrival</th>
-                                        <th scope="col">Minutes Away</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="asteroidtable">
-                                </tbody>
-                            </table>
-                            <button class="btn btn-primary" id="clear-button">Clear</button>
+                <div class="col-md-4">
+                    <div class="hover-bio-wrapper">
+                        <div class="hover-bio">
+                            <figure class="hover-bio">
+                                <img src="./assets/images/mollyHeadEdited.jpeg">
+                                <figcaption>
+                                    <h2>MOLLY COUGILL</h2>
+                                    <p>BACK-END DEV</p>
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
+                <!--closing div tag for Molly Pic-->
             </div>
+            <!-- Closing Div Tag for First Team Member Row -->
+
+            <!-- Second Row Team Member Starts -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="hover-bio-wrapper">
+                        <div class="hover-bio">
+                            <figure class="hover-bio">
+                                <img src="./assets/images/addisHead.jpeg">
+                                <figcaption>
+                                    <h2>ADDIS CASCO</h2>
+                                    <p>FRONT-END DEV</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <!-- closing tag for Addis Pic-->
+
+
+                <div class="col-md-4">
+                    <div class="hover-bio-wrapper">
+                        <div class="hover-bio">
+                            <figure class="hover-bio">
+                                <img src="./assets/images/snehaHeadEdited.jpg">
+                                <figcaption>
+                                    <h2>KEELY BRENNAN</h2>
+                                    <p>BACK-END DEV</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <!--cloing div tag for Keely Pic -->
+
+                <div class="col-md-4">
+                    <div class="hover-bio-wrapper">
+                        <div class="hover-bio">
+                            <figure class="hover-bio">
+                                <img src="./assets/images/snehaHeadEdited.jpg">
+                                <figcaption>
+                                    <h2>SNEHA DAMA</h2>
+                                    <p>FRONT-END DEV</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <!-- closing div tag for Sneha Pic-->
+
+            </div>
+            <!--Closing Tag for Second Team member Row-->
 
     </div>
-    <!-- </div> -->
-    <!--Do not think we need this closing tag div-->
-    </section>
-
-    <!-- Asteroid Table ENDS -->
 
 
+
+
+
+    <!-- ASTEROID TABLE ENDS -->
+
+    <!-- PARALLAX CONTACT PHOTO-->
     <div class="pimg3">
         <div class="ptext">
             <span class="border trans">
-                Image 3 Text
+                CONTACT
             </span>
         </div>
     </div>
@@ -338,7 +429,7 @@
         </section>
     </div>
 
-    <!--contact form -->
+    <!--CONTACT FORM SECTION  -->
     <div id="contact" class="container">
 
         <section class - "section section-dark">
@@ -383,7 +474,7 @@
                             </label>
                             <input type="text" name="phone">
                         </p>
-                        <!--slider-->
+                        <!--SLIDER-->
                         <h3>Invest</h3>
 
                         <div class="slidecontainer">
@@ -392,7 +483,8 @@
                                 <span id="demo"></span>
                             </p>
                         </div>
-
+                        <!--END SLIDER-->
+                        <!--USER MESSAGE-->
                         <p class="full">
                             <label>Message
                                 <span class="asterisk">*</span>
@@ -410,23 +502,16 @@
         </section>
     </div>
 
-
-
-
-
-
-
+    <!-- LAST PARALLAX IMAGE -->
     <div class="pimg1">
         <div class="ptext">
             <span class="border trans">
-                Parallax Website
+                TAKE THAT ASTE-RISK, WE KNOW WE ARE.
             </span>
         </div>
     </div>
-
-
-
 </body>
+
 
 <!-- link to firebase -->
 
@@ -445,6 +530,9 @@
 </script>
 
 <!-- link javascript -->
+
+<!-- LINK JAVASCRIPT -->
+
 
 <script "text/javascript" src="./assets/javascript/proj.js"></script>
 
