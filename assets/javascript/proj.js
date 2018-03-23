@@ -1,7 +1,9 @@
 
 
 $(document).ready(function () {
-    var userInput = '\"T\"';
+    var userInput = $("#asteroid-input").val().trim();
+
+    console.log('butts');
 
     var query = '{"spec":' + userInput + '}';
 
