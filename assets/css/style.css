@@ -124,7 +124,7 @@ html, body {
     /* background-image: url("../images/starbackground1.jpg"); */
     background-color: #306d9f;
     color: #306d9f;
-    /* color: #7cabc7; */
+    color: #7cabc7;
   }
 
   .teaminfobox {
@@ -162,6 +162,9 @@ html, body {
     text-align: center;
     vertical-align: middle;
     width: 140px;
+  }
+  #userInputDash {
+      background-color:#dbd6d6;
   }
   #information {
     background: url(../images/estate.jpg) no-repeat center center fixed;
