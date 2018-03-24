@@ -8,16 +8,6 @@ $(document).ready(function () {
 
     spectraRef.on("value", gotData, errData);
 
-    console.log(url);
-    $.ajax({
-        url: url,
-        method: "GET",
-    }).then(function (response) {
-
-        console.log(response);
-
-    });
-
     var asteroidObj =
         [{
             "name": "Ryugu",
