@@ -25,6 +25,64 @@ $(document).ready(function () {
 
     });
 
+    var asteroidObj = 
+        [{
+        "name":"Ryugu",
+        "Type":"Cg",
+        "a":"1.190",
+        "e":"0.190",
+        "value":"82.76 billion",
+        "estProfit":"30.07 billion",
+        "velocity":"4.664",
+        "moid":"0.000083",
+        "Group":"APO"
+        },
+        {
+        "name":"1989 ML",
+        "Type":"X",
+        "a":"1.272",
+        "e":"0.137",
+        "value":"13.94 billion",
+        "estProfit":"4.38 billion",
+        "velocity":"4.889",
+        "moid":"0.082029",
+        "Group":"AMO"
+        },
+        {
+        "name":"Nereus",
+        "Type":"Xe",
+        "a":"1.489",
+        "e":"0.360",
+        "value":"4.71 billion",
+        "estProfit":"1.39 billion",
+        "velocity":"4.985",
+        "moid":"0.003260",
+        "Group":"APO"
+        },
+        {
+        "name":"Bennu",
+        "Type":"B",
+        "a":"1.126",
+        "e":"0.204",
+        "value":"669.96 million",
+        "estProfit":"185.00 million",
+        "velocity":"5.096",
+        "moid":"0.003223",
+        "Group":"APO"
+        },
+        {
+        "name":"Didymos",
+        "Type":"Xk",
+        "a":"1.644",
+        "e":"0.384",
+        "value":"62.25 billion",
+        "estProfit":"16.41 billion",
+        "velocity":"5.162",
+        "moid":"0.039291",
+        "Group":"APO"
+        }];
+    
+
     //build placeholder 
 
     var trace1 = {
