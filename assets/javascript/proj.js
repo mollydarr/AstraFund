@@ -74,12 +74,19 @@ $(document).ready(function () {
 //on functions for firebase
 function gotData(snapshot) {
 
-    $("#tableBody").empty();
+    $("#spectra").empty();
 
     var spectra = snapshot.val();
     console.log(spectra);
     var keys = Object.keys(spectra);
     console.log(keys);
+
+    for (i = 0; i < keys.length; i++) {
+        console.log(keys[i]);
+
+        $("#spectra").append("<option>"+keys[i])
+
+    };
 
 };
 
