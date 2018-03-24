@@ -20,7 +20,8 @@ $(document).ready(function () {
             "estProfit": "30.07 billion",
             "velocity": "4.664",
             "moid": "0.000083",
-            "Group": "APO"
+            "Group": "APO",
+            "sharePrice": 10
         },
         {
             "name": "1989 ML",
@@ -31,7 +32,8 @@ $(document).ready(function () {
             "estProfit": "4.38 billion",
             "velocity": "4.889",
             "moid": "0.082029",
-            "Group": "AMO"
+            "Group": "AMO",
+            "sharePrice": 20
         },
         {
             "name": "Nereus",
@@ -42,7 +44,8 @@ $(document).ready(function () {
             "estProfit": "1.39 billion",
             "velocity": "4.985",
             "moid": "0.003260",
-            "Group": "APO"
+            "Group": "APO",
+            "sharePrice": 30
         },
         {
             "name": "Bennu",
@@ -53,7 +56,8 @@ $(document).ready(function () {
             "estProfit": "185.00 million",
             "velocity": "5.096",
             "moid": "0.003223",
-            "Group": "APO"
+            "Group": "APO",
+            "sharePrice": 40
         },
         {
             "name": "Didymos",
@@ -64,9 +68,19 @@ $(document).ready(function () {
             "estProfit": "16.41 billion",
             "velocity": "5.162",
             "moid": "0.039291",
-            "Group": "APO"
+            "Group": "APO",
+            "sharePrice": 50
         }];
 
+        var moidArray = [];
+        var accessibility= [];
+        for (i=0;i<asteroidObj.length;i++){
+            moidArray.push(asteroidObj[i].moid);
+            console.log(moidArray);
+            accessibility.push(asteroidObj[i].moid*asteroidObj[i].velocity);
+            console.log(accessibility);
+        }
+        
 
     //on functions for firebase
     function gotData(snapshot) {
@@ -147,7 +161,7 @@ $(document).ready(function () {
  //build placeholder 
 
  var trace1 = {
-    x: [1, 2, 3, 4],
+    x: [6, 7, 8, 9],
     y: [7, 8, 9, 10],
     text: ['Asteroid1', 'Asteroid2', 'Asteroid3', 'Asteroid4'],
     mode: 'markers',
@@ -157,7 +171,7 @@ $(document).ready(function () {
     }
 };
 
-var trace2 = {
+/*var trace2 = {
     x: [1, 2, 3, 4],
     y: [9, 10, 12, 15],
     text: ['Asteroid1', 'Asteroid2', 'Asteroid3', 'Asteroid4'],
@@ -166,11 +180,11 @@ var trace2 = {
         size: [100, 250, 500, 1000],
         sizemode: 'area'
     }
-};
+};*/
 
 
 
-var data = [trace1, trace2];
+var data = [trace1];
 
 var layout = {
     title: "THIS IS A PLACEHOLDER CHART",
@@ -178,10 +192,10 @@ var layout = {
     height: 400,
     width: 480,
     xaxis: {
-        title: 'Price per Share',
+        title: 'MOID',
     },
     yaxis: {
-        title: 'Estimated Profit',
+        title: 'Price per Share',
     }
 };
 
