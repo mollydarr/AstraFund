@@ -134,6 +134,19 @@ $(document).ready(function () {
             $(".table-input").val("");
 
             console.log(user);
+
+            for (i=0;i<asteroidObj.length;i++){
+                if (asteroidObj[i].Type===user.spectra){
+                    console.log("yessir");
+                    console.log(asteroidObj[i].sharePrice);
+                    if (user.investAmt < asteroidObj[i].sharePrice){
+                        console.log("you do not have sufficient funds to invest in one share of this asteroid type");
+                    }else{
+                        var numOfShares = Math.floor(user.investAmt/asteroidObj[i].sharePrice);
+                        console.log(numOfShares);
+                    }
+                }else{}
+            }
         }
     });
 
