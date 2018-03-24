@@ -1,14 +1,7 @@
 
 
 $(document).ready(function () {
-    var userInput = "\'T\'"; //= $("#asteroid-input").val();
-
-    var query = '{"spec":' + userInput + '}';
-
-    var limit = "5";
-
-    var url = 'http://www.asterank.com/api/asterank?query=' + query + '&limit=' + limit;
-
+    
     var database = firebase.database();
 
     var spectraRef = database.ref('spectraType');
