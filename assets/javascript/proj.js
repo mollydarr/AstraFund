@@ -11,9 +11,9 @@ $(document).ready(function () {
 
     var database = firebase.database();
 
-    var spectraRef = database.ref("spectraRef");
+    var spectraRef = database.ref('spectraType');
 
-    console.log(spectraRef);
+    spectraRef.on("value", gotData, errData);
 
     console.log(url);
     $.ajax({
@@ -26,7 +26,7 @@ $(document).ready(function () {
     });
 
     //build placeholder 
-    
+
     var trace1 = {
         x: [1, 2, 3, 4],
         y: [7, 8, 9, 10],
@@ -48,7 +48,7 @@ $(document).ready(function () {
             sizemode: 'area'
         }
     };
-    
+
 
 
     var data = [trace1, trace2];
@@ -67,28 +67,43 @@ $(document).ready(function () {
     };
 
 
-Plotly.newPlot('productTitle', data, layout);
+    Plotly.newPlot('productTitle', data, layout);
 
 });
 
+//on functions for firebase
+function gotData(snapshot) {
+
+    var spectra = snapshot.val();
+    console.log(spectra);
+    var keys = Object.keys(spectra);
+    console.log(keys);
+
+};
+
+function errData(err) {
+    console.log("error!");
+    console.log(err);
+}
+
 /*pie chart*/
-google.charts.load("current", {packages:["corechart"]});
+google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
-  var data = google.visualization.arrayToDataTable([
-    ['Task', 'Hours per Day'],
-    ['Invest1',     11],
-    ['Invest2',      2],
-    ['Invest3',  2],
-    ['Invest4', 2],
-    ['Invest5',    7]
-  ]);
+    var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Invest1', 11],
+        ['Invest2', 2],
+        ['Invest3', 2],
+        ['Invest4', 2],
+        ['Invest5', 7]
+    ]);
 
-  var options = {
-    title: 'Investment',
-    pieHole: 0.4,
-  };
+    var options = {
+        title: 'Investment',
+        pieHole: 0.4,
+    };
 
-  var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-  chart.draw(data, options);
+    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+    chart.draw(data, options);
 }
