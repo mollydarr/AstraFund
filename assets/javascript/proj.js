@@ -77,6 +77,7 @@ $(document).ready(function () {
         for (i=0;i<asteroidObj.length;i++){
             moidArray.push(asteroidObj[i].moid);
             console.log(moidArray);
+            //Campodonico Accessibiility Factor (or the CAF)
             accessibility.push(asteroidObj[i].moid*asteroidObj[i].velocity);
             console.log(accessibility);
         }
