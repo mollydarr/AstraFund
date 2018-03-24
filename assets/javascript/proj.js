@@ -108,14 +108,14 @@ $(document).ready(function () {
     };
 
 
-
+/*plot*/
     var data = [trace1, trace2];
 
     var layout = {
         title: "THIS IS A PLACEHOLDER CHART",
         showLegend: true,
         height: 400,
-        width: 480,
+        width: 715,
         xaxis: {
             title: 'Price per Share',
         },
