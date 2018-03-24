@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     var database = firebase.database();
 
-    var spectraRef = database.ref("spectraType");
+    var spectraRef = database.ref("spectraRef");
 
     console.log(spectraRef);
 
