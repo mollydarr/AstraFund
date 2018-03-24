@@ -103,7 +103,7 @@ $(document).ready(function () {
 
         var spectra = $("#spectra").val();
 
-        if (userName === "" || date === "" || investAmt === "") {
+        if (userName === "" || date === "" || investAmt === "" || investAmt <= 0) {
             console.log('all fields need to be filled');
         } else {
             var user = {
