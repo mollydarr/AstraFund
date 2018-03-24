@@ -6,6 +6,8 @@ $(document).ready(function () {
 
     var spectraRef = database.ref('spectraType');
 
+    var userRef = database.ref('users');
+
     spectraRef.on("value", gotData, errData);
 
     var asteroidObj =
@@ -65,7 +67,7 @@ $(document).ready(function () {
             "Group": "APO"
         }];
 
-    
+
     //build placeholder 
 
     var trace1 = {
@@ -136,7 +138,7 @@ $(document).ready(function () {
         console.log(err);
     }
 
-    $("#userSubmit").on("click",function(e){
+    $("#userSubmit").on("click", function (e) {
         e.preventDefault();
 
         var userName = $("#userName-input").val().trim();
@@ -147,10 +149,20 @@ $(document).ready(function () {
 
         var spectra = $("#spectra").val();
 
-        console.log(userName);
-        console.log(date);
-        console.log(investAmt);
-        console.log(spectra);
+        if (userName === "" || date === "" || investAmt === "") {
+            console.log('all fields need to be filled');
+        } else {
+            var user = {
+                userName:userName,
+                date:date,
+                investAmt:investAmt,
+                spectra:spectra,
+            };
+
+            userRef.push(user)
+
+            console.log(user);
+        }
     });
 
     /*pie chart*/
