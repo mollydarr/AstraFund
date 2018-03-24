@@ -114,6 +114,8 @@ $(document).ready(function () {
             };
 
             userRef.push(user)
+            
+            $(".table-input").val("");
 
             console.log(user);
         }
