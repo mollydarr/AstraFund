@@ -140,11 +140,34 @@ html, body {
     /* background-image: url("../images/starbackground1.jpg"); */
     background-color: #272952;
     color: #306d9f;
+
+    color: #7cabc7;
+    width: 100%;
+  }
+  
+
+  #topSectionMarket.row {
+      width: 100%;
+  }
+
+  .marketTrendPlot {
+      width: 100%;
+  }
+
+  #topSectionServ.row {
+      width: 100%;
+      padding: 0px 30px;
+  }
+
+  #serviceSection.container {
+      width: 100%;
+
     /* color: #7cabc7; */
   }
 
   /* #userInputDash.container{
     width: 100%;
+
   }
 
   #userInputDash {
@@ -194,6 +217,7 @@ h2.contentTitle {
 
   #productTitle {
       color: #FFFFFF;
+      padding: 15px;
   }
 
   #services .glyphicon {
@@ -211,7 +235,30 @@ h2.contentTitle {
 
   /* #userInputDash {
       background-color:#dbd6d6;
+
+      width: 100%;
+      padding: 0px 30px;
+  }
+/*expands to the edge of browser*/
+  #userInputDash.container {
+      width: 100%;
+  }
+
+  #inputDash.row {
+      background-color: #dbd6d6;
+  }
+
+  #asteroidGray.row {
+      width: 100%;
+  }
+
+  #asteroidListDiv {
+      padding: 0px 30px;
+  }
+
+
   } */
+
   #information {
     background: url(../images/estate.jpg) no-repeat center center fixed;
     display: table;
