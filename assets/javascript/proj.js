@@ -1,22 +1,14 @@
 
 
 $(document).ready(function () {
-    
+
     var database = firebase.database();
 
     var spectraRef = database.ref('spectraType');
 
+    var userRef = database.ref('users');
+
     spectraRef.on("value", gotData, errData);
-
-    // console.log(url);
-    // $.ajax({
-    //     url: url,
-    //     method: "GET",
-    // }).then(function (response) {
-
-    //     console.log(response);
-
-    // });
 
     var asteroidObj =
         [{
@@ -113,6 +105,35 @@ $(document).ready(function () {
         console.log("error!");
         console.log(err);
     }
+
+    $("#userSubmit").on("click", function (e) {
+        e.preventDefault();
+
+        var userName = $("#userName-input").val().trim();
+
+        var date = $("#date-input").val();
+
+        var investAmt = $("#investment-input").val().trim();
+
+        var spectra = $("#spectra").val();
+
+        if (userName === "" || date === "" || investAmt === "" || investAmt <= 0) {
+            console.log('all fields need to be filled');
+        } else {
+            var user = {
+                userName:userName,
+                date:date,
+                investAmt:investAmt,
+                spectra:spectra,
+            };
+
+            userRef.push(user)
+            
+            $(".table-input").val("");
+
+            console.log(user);
+        }
+    });
 
     /*pie chart*/
     google.charts.load("current", { packages: ["corechart"] });
