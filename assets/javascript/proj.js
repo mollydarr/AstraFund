@@ -73,7 +73,7 @@ $(document).ready(function () {
             "sharePrice": 50
         }];
 
-        //build CAF array
+        //build CAF array. 
         var accessibility= [];
         for (i=0;i<asteroidObj.length;i++){
             accessibility.push(asteroidObj[i].moid*asteroidObj[i].velocity*10);
