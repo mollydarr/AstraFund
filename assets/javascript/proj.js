@@ -8,15 +8,15 @@ $(document).ready(function () {
 
     spectraRef.on("value", gotData, errData);
 
-    console.log(url);
-    $.ajax({
-        url: url,
-        method: "GET",
-    }).then(function (response) {
+    // console.log(url);
+    // $.ajax({
+    //     url: url,
+    //     method: "GET",
+    // }).then(function (response) {
 
-        console.log(response);
+    //     console.log(response);
 
-    });
+    // });
 
     var asteroidObj =
         [{
@@ -75,6 +75,12 @@ $(document).ready(function () {
             "Group": "APO"
         }];
 
+        var moidArray = [];
+        for (i=0;i<asteroidObj.length;i++){
+            moidArray.push(asteroidObj[i].moid);
+            console.log(moidArray);
+        }
+        
 
     //on functions for firebase
     function gotData(snapshot) {
@@ -136,7 +142,7 @@ $(document).ready(function () {
     }
 };
 
-var trace2 = {
+/*var trace2 = {
     x: [1, 2, 3, 4],
     y: [9, 10, 12, 15],
     text: ['Asteroid1', 'Asteroid2', 'Asteroid3', 'Asteroid4'],
@@ -145,11 +151,11 @@ var trace2 = {
         size: [100, 250, 500, 1000],
         sizemode: 'area'
     }
-};
+};*/
 
 
 
-var data = [trace1, trace2];
+var data = [trace1];
 
 var layout = {
     title: "THIS IS A PLACEHOLDER CHART",
@@ -157,10 +163,10 @@ var layout = {
     height: 400,
     width: 480,
     xaxis: {
-        title: 'Price per Share',
+        title: 'MOID',
     },
     yaxis: {
-        title: 'Estimated Profit',
+        title: 'Price per Share',
     }
 };
 
