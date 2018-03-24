@@ -121,17 +121,39 @@ html, body {
     background-size: cover;
   }
 
+#teamdiv {
+    position: relative;
+    left: 60px;
+}
+
+  #services.container {
+    width: 100%;
+}
+
+#serviceTitle {
+    text-align: center;
+    color: #eee;
+}
+
   #services {
     /* background-image: url("../images/starbackground1.jpg"); */
-    background-color: #306d9f;
+    background-color: #272952;
     color: #306d9f;
-    color: #7cabc7;
+    /* color: #7cabc7; */
   }
+
+  /* #userInputDash.container{
+    width: 100%;
+  }
+
+  #userInputDash {
+    background-color: #dbd6d6;
+  } */
 
   .teaminfobox {
       height: 250px;
       width: 250px;
-      background-color: #0059ff;
+      background-color: #12336f;
       color: rgb(247, 240, 240); 
       font-family: "Lato", sans-serif;
       font-size: 23px;
@@ -148,6 +170,26 @@ html, body {
     /* background-image: url("../images/starbackground1.jpg"); */
     background-color: #d2e4ec;
 }
+
+#aboutcontent {
+    position: relative;
+    left: 116px;
+    top: 18px;
+}
+
+div.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 18rem;
+}
+
+h2.contentTitle {
+    text-align: center;
+}
+
+
 
   #productTitle {
       color: #FFFFFF;
@@ -166,9 +208,9 @@ html, body {
   }
 
 
-  #userInputDash {
+  /* #userInputDash {
       background-color:#dbd6d6;
-  }
+  } */
   #information {
     background: url(../images/estate.jpg) no-repeat center center fixed;
     display: table;
@@ -295,7 +337,7 @@ figure.hover-bio:hover img {
  
 figure.hover-bio:hover figcaption{
     /* background-color: #E91E63; */
-    background-color: #0059ff;
+    background-color: #022057;
     color: #fff;
             opacity: .9;
     -moz-transform: translate3d(0, -100%, 0);
