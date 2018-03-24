@@ -74,6 +74,8 @@ $(document).ready(function () {
 //on functions for firebase
 function gotData(snapshot) {
 
+    $("#tableBody").empty();
+
     var spectra = snapshot.val();
     console.log(spectra);
     var keys = Object.keys(spectra);
