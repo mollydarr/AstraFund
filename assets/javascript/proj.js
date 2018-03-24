@@ -18,6 +18,7 @@ $(document).ready(function () {
 
     // });
 
+    //Asteroid Object
     var asteroidObj =
         [{
             "name": "Ryugu",
@@ -80,12 +81,10 @@ $(document).ready(function () {
             "sharePrice": 50
         }];
 
-        var moidArray = [];
+        //build CAF array
         var accessibility= [];
         for (i=0;i<asteroidObj.length;i++){
-            moidArray.push(asteroidObj[i].moid);
-            console.log(moidArray);
-            accessibility.push(asteroidObj[i].moid*asteroidObj[i].velocity);
+            accessibility.push(asteroidObj[i].moid*asteroidObj[i].velocity*10);
             console.log(accessibility);
         }
         
@@ -137,11 +136,11 @@ $(document).ready(function () {
     }
 });
 
- //build placeholder 
+ //build asteroid price graph
 
  var trace1 = {
-    x: [6, 7, 8, 9],
-    y: [7, 8, 9, 10],
+    x: [0.0038711199999999996, 4.010397810000001, 0.16251100000000002, 0.16424408000000001, 2.02820142],
+    y: [10,20,30,40,50],
     text: ['Asteroid1', 'Asteroid2', 'Asteroid3', 'Asteroid4'],
     mode: 'markers',
     marker: {
@@ -150,31 +149,18 @@ $(document).ready(function () {
     }
 };
 
-/*var trace2 = {
-    x: [1, 2, 3, 4],
-    y: [9, 10, 12, 15],
-    text: ['Asteroid1', 'Asteroid2', 'Asteroid3', 'Asteroid4'],
-    mode: 'markers',
-    marker: {
-        size: [100, 250, 500, 1000],
-        sizemode: 'area'
-    }
-};*/
-
-
-
 var data = [trace1];
 
 var layout = {
-    title: "THIS IS A PLACEHOLDER CHART",
+    title: "Available Asteroids",
     showLegend: true,
     height: 400,
     width: 480,
     xaxis: {
-        title: 'MOID',
+        title: 'Accessibility Factor (CAF)',
     },
     yaxis: {
-        title: 'Price per Share',
+        title: 'Price per Share (USD)',
     }
 };
 
