@@ -1,7 +1,7 @@
 
 
 $(document).ready(function () {
-    
+
     var database = firebase.database();
 
     var spectraRef = database.ref('spectraType');
@@ -65,7 +65,7 @@ $(document).ready(function () {
             "Group": "APO"
         }];
 
-
+    
     //build placeholder 
 
     var trace1 = {
@@ -135,6 +135,23 @@ $(document).ready(function () {
         console.log("error!");
         console.log(err);
     }
+
+    $("#userSubmit").on("click",function(e){
+        e.preventDefault();
+
+        var userName = $("#userName-input").val().trim();
+
+        var date = $("#date-input").val();
+
+        var investAmt = $("#investment-input").val().trim();
+
+        var spectra = $("#spectra").val();
+
+        console.log(userName);
+        console.log(date);
+        console.log(investAmt);
+        console.log(spectra);
+    });
 
     /*pie chart*/
     google.charts.load("current", { packages: ["corechart"] });
