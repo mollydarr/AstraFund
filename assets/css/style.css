@@ -125,7 +125,7 @@ html, body {
     /* background-image: url("../images/starbackground1.jpg"); */
     background-color: #306d9f;
     color: #306d9f;
-    /* color: #7cabc7; */
+    color: #7cabc7;
   }
 
   .teaminfobox {
@@ -165,6 +165,37 @@ html, body {
     width: 140px;
   }
 
+
+  #userInputDash {
+      background-color:#dbd6d6;
+  }
+  #information {
+    background: url(../images/estate.jpg) no-repeat center center fixed;
+    display: table;
+    height: 800px;
+    position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  #information .panel {
+    opacity: 0.85;
+  }
+  #google_map {
+    height: 500px;
+  }
+  footer {
+    padding: 20px 0;
+  }
+  footer .glyphicon {
+    color: #333333;
+    font-size: 60px;
+  }
+  footer .glyphicon:hover {
+    color: #306d9f;
+  }
 
   /* Asteroid form -section two - services/products */
 
