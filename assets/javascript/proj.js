@@ -1,6 +1,49 @@
 
 
 $(document).ready(function () {
+    var cobaltURL = "https://www.quandl.com/api/v3/datasets/LME/PR_CO?column_index=1&api_key=nf68sBZ1FqJ86q9xzvWx";
+    var nickelURL = "https://www.quandl.com/api/v3/datasets/LME/PR_NI?column_index=1&api_key=nf68sBZ1FqJ86q9xzvWx";
+
+    var cobaltPrice = "";
+    var cobaltDateRefreshed = "";
+    var nickelPrice = "";
+    var nickelDateRefreshed = "";
+
+    //cobalt ajax call
+    $.ajax({
+        url: cobaltURL,
+        method: "GET"
+    })
+        .done(function (response) {
+            var results = response.dataset;
+            cobaltPrice = (results.data[0])[1];
+            console.log(results.name);
+            console.log(results.description);
+            console.log("price = " + cobaltPrice);
+            cobaltDateRefreshed = results.newest_available_date;
+            console.log("Price refreshed at " + cobaltDateRefreshed);
+
+        });
+
+        //nickel ajax call
+    $.ajax({
+        url: nickelURL,
+        method: "GET"
+    })
+        .done(function (response) {
+            var results = response.dataset;
+            nickelPrice = (results.data[0])[1];
+            console.log(results.name);
+            console.log(results.description);
+            console.log("price = " + nickelPrice);
+            nickelDateRefreshed = results.newest_available_date;
+            console.log("Price refreshed at " + nickelDateRefreshed);
+
+        });
+
+    //iron, ammonia, nitrogen, hydrogen, nickel
+
+
 
     var database = firebase.database();
 
@@ -9,6 +52,8 @@ $(document).ready(function () {
     var userRef = database.ref('users');
 
     spectraRef.on("value", gotData, errData);
+
+    var accessibility = [];
 
     //Asteroid Object
     var asteroidObj =
@@ -22,7 +67,7 @@ $(document).ready(function () {
             "velocity": "4.664",
             "moid": "0.000083",
             "Group": "APO",
-            "sharePrice": 10
+            "sharePrice": 10,
         },
         {
             "name": "1989 ML",
@@ -73,16 +118,19 @@ $(document).ready(function () {
             "sharePrice": 50
         }];
 
-        //build CAF array. 
-        var accessibility= [];
-        for (i=0;i<asteroidObj.length;i++){
+    //build CAF array. 
 
-            accessibility.push(asteroidObj[i].moid*asteroidObj[i].velocity*10);
-            //Campodonico Accessibiility Factor (or the CAF)
-            accessibility.push(asteroidObj[i].moid*asteroidObj[i].velocity);
-            console.log(accessibility);
-        }
-        
+    for (i = 0; i < asteroidObj.length; i++) {
+        //Campodonico Accessibiility Factor (or the CAF)
+        accessibility.push(asteroidObj[i].moid * asteroidObj[i].velocity * 10);
+        $("#asteroidTable tr:last").after("<tr><td>" + asteroidObj[i].name +
+            "</td><td>" + asteroidObj[i].value +
+            "</td><td>" + asteroidObj[i].estProfit +
+            "</td><td>" + accessibility[i] +
+            "</td><td>" + "placeholder" +
+            "</td><td>" + asteroidObj[i].sharePrice + "</td></tr>");
+    }
+
 
     //on functions for firebase
     function gotData(snapshot) {
@@ -123,20 +171,26 @@ $(document).ready(function () {
             console.log('all fields need to be filled');
         } else {
             var user = {
-                userName:userName,
-                date:date,
-                investAmt:investAmt,
-                spectra:spectra,
+                userName: userName,
+                date: date,
+                investAmt: investAmt,
+                spectra: spectra,
             };
 
             userRef.push(user)
-            
+
             $(".table-input").val("");
 
             console.log(user);
         }
     });
 
+
+
+
+
+
+    console.log(asteroidObj);
     /*pie chart*/
     google.charts.load("current", { packages: ["corechart"] });
     google.charts.setOnLoadCallback(drawChart);
@@ -158,35 +212,37 @@ $(document).ready(function () {
         var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
         chart.draw(data, options);
     }
+
+    var trace1 = {
+        x: accessibility,
+        y: [10, 20, 30, 40, 50],
+        text: [asteroidObj[0].name, asteroidObj[1].name, asteroidObj[2].name, asteroidObj[3].name, asteroidObj[4].name],
+        mode: 'markers',
+        marker: {
+            size: [100, 100, 100, 100, 100],
+            sizemode: 'area'
+        }
+    };
+
+    var data = [trace1];
+
+    var layout = {
+        title: "Available Asteroids",
+        showLegend: true,
+        height: 400,
+        width: 480,
+        xaxis: {
+            title: 'Accessibility Factor (CAF)',
+        },
+        yaxis: {
+            title: 'Price per Share (USD)',
+        }
+    };
+
+
+    Plotly.newPlot('productTitle', data, layout);
 });
 
- //build asteroid price graph
-
- var trace1 = {
-    x: [0.0038711199999999996, 4.010397810000001, 0.16251100000000002, 0.16424408000000001, 2.02820142],
-    y: [10,20,30,40,50],
-    text: ['Asteroid1', 'Asteroid2', 'Asteroid3', 'Asteroid4'],
-    mode: 'markers',
-    marker: {
-        size: [100, 250, 500, 1000],
-        sizemode: 'area'
-    }
-};
-
-var data = [trace1];
-
-var layout = {
-    title: "Available Asteroids",
-    showLegend: true,
-    height: 400,
-    width: 480,
-    xaxis: {
-        title: 'Accessibility Factor (CAF)',
-    },
-    yaxis: {
-        title: 'Price per Share (USD)',
-    }
-};
 
 
-Plotly.newPlot('productTitle', data, layout);
+
