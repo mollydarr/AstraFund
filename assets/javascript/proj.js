@@ -353,13 +353,12 @@ $(document).ready(function () {
             articles.addClass('panel-body');
             articles.attr('id', 'articleSection-' + i);
             $('#articles').append(articles);
-            
+            $('#articleSection-' + i).append("<img src=" + newsResults[i].urlToImage + " height='200' width='250'>");
             $('#articleSection-' + i).append("<h3>" + newsResults[i].title + "</3>" + "<br>");
             $('#articleSection-' + i).append("<h6>" + newsResults[i].description + "</h6>" + "<br>");
             $('#articleSection-' + i).append(newsResults[i].source.name + "<br>");
             $('#articleSection-' + i).append("Published:" + " " + newsResults[i].publishedAt + "<br>"); //add moment.js formatting to published date
             $('#articleSection-' + i).append("<a href=" + newsResults[i].url +  ">" + "Read More" + "</a>" + "<br>");
-            //$('#articleSection-' + i).append("<img src=" + newsResults[i].urlToImage + ">");
         }   
 
     }); // END NEWS API CALL
