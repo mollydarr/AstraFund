@@ -76,28 +76,29 @@ $(document).ready(function () {
         //build CAF array. 
         var accessibility= [];
         for (i=0;i<asteroidObj.length;i++){
-
-
-/*plot*/
-    var data = [trace1, trace2];
-
-    var layout = {
-        title: "THIS IS A PLACEHOLDER CHART",
-        showLegend: true,
-        height: 400,
-        width: 715,
-        xaxis: {
-            title: 'Price per Share',
-        },
-        yaxis: {
-            title: 'Estimated Profit',
-
             accessibility.push(asteroidObj[i].moid*asteroidObj[i].velocity*10);
             //Campodonico Accessibiility Factor (or the CAF)
             accessibility.push(asteroidObj[i].moid*asteroidObj[i].velocity);
             console.log(accessibility);
 
         }
+
+
+/*plot*/
+    // var data = [trace1, trace2];
+
+    // var layout = {
+    //     title: "THIS IS A PLACEHOLDER CHART",
+    //     showLegend: true,
+    //     height: 400,
+    //     width: 715,
+    //     xaxis: {
+    //         title: 'Price per Share',
+    //     },
+    //     yaxis: {
+    //         title: 'Estimated Profit',
+
+          
         
 
     //on functions for firebase
@@ -208,7 +209,7 @@ var layout = {
     title: "Available Asteroids",
     showLegend: true,
     height: 400,
-    width: 480,
+    width: 650,
     xaxis: {
         title: 'Accessibility Factor (CAF)',
     },

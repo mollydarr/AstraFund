@@ -139,39 +139,29 @@ html, body {
     /* background-image: url("../images/starbackground1.jpg"); */
     background-color: #272952;
     color: #306d9f;
-
-    color: #7cabc7;
-    width: 100%;
-  }
-  
-
-  #topSectionMarket.row {
-      width: 100%;
-  }
-
-  .marketTrendPlot {
-      width: 100%;
-  }
-
-  #topSectionServ.row {
-      width: 100%;
-      padding: 0px 30px;
-  }
-
-  #serviceSection.container {
-      width: 100%;
-
     /* color: #7cabc7; */
   }
 
   /* #userInputDash.container{
     width: 100%;
-
   }
 
   #userInputDash {
     background-color: #dbd6d6;
   } */
+
+  #investDash {
+      padding: 0px 30px;
+  }
+
+  #mktTrend {
+      padding: 0px 30px;
+  }
+
+#plotGraph {
+    padding: 0px 30px;
+    margin-bottom: 25px;
+}
 
   .teaminfobox {
       height: 250px;
@@ -200,6 +190,22 @@ html, body {
     top: 18px;
 }
 
+#articles.container {
+        width: 100%;
+        background-color: #d2e4ec;
+}
+
+#articlesdiv {
+    position: relative;
+    left: 60px;
+}
+
+#team.container {
+    width: 100%;
+    background-color: #d2e4ec;
+
+}
+
 div.card {
     display: flex;
     justify-content: center;
@@ -212,11 +218,13 @@ h2.contentTitle {
     text-align: center;
 }
 
+.footer {
+    text-align: center;
+}
 
 
   #productTitle {
       color: #FFFFFF;
-      padding: 15px;
   }
 
   #services .glyphicon {
@@ -230,65 +238,18 @@ h2.contentTitle {
     vertical-align: middle;
     width: 140px;
   }
-
+#asteroidListDiv {
+    padding: 0px 30px;
+}
 
   /* #userInputDash {
       background-color:#dbd6d6;
-
-      width: 100%;
-      padding: 0px 30px;
-  }
-/*expands to the edge of browser*/
-  #userInputDash.container {
-      width: 100%;
-  }
-
-  #inputDash.row {
-      background-color: #dbd6d6;
-  }
-
-  #asteroidGray.row {
-      width: 100%;
-  }
-
-  #asteroidListDiv {
-      padding: 0px 30px;
-  }
-
-
   } */
-
-  #information {
-    background: url(../images/estate.jpg) no-repeat center center fixed;
-    display: table;
-    height: 800px;
-    position: relative;
-    width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  #information .panel {
-    opacity: 0.85;
-  }
-  #google_map {
-    height: 500px;
-  }
-  footer {
-    padding: 20px 0;
-  }
-  footer .glyphicon {
-    color: #333333;
-    font-size: 60px;
-  }
-  footer .glyphicon:hover {
-    color: #306d9f;
-  }
-
+ 
   /* Asteroid form -section two - services/products */
 
   #asteroidForm {
+      padding: 0px 30px;
       /* width: 50%; */
       /* margin: auto; */
       /* margin-left: 20px; */
@@ -509,7 +470,7 @@ figure.hover-bio:hover figcaption{
 
 /* SLIDER STYLE */
 
-.slider::-webkit-slider-thumb {
+ .slider::-webkit-slider-thumb { 
     -webkit-appearance: none;
     appearance: none;
     width: 23px;
@@ -525,6 +486,6 @@ figure.hover-bio:hover figcaption{
     border: 0;
     background-image: url("../images/rocket.png");
     cursor: pointer;
-}
+} 
 
 /* CONTACT FORM CODE ENDS */
