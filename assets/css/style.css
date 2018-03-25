@@ -489,3 +489,8 @@ figure.hover-bio:hover figcaption{
 } 
 
 /* CONTACT FORM CODE ENDS */
+
+/* NEWS ARTICLES IMAGE FORMAT */
+.articleSection- {
+    width: 300px;
+}
