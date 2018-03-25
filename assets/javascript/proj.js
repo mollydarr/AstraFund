@@ -3,11 +3,17 @@
 $(document).ready(function () {
     var cobaltURL = "https://www.quandl.com/api/v3/datasets/LME/PR_CO?column_index=1&api_key=nf68sBZ1FqJ86q9xzvWx";
     var nickelURL = "https://www.quandl.com/api/v3/datasets/LME/PR_NI?column_index=1&api_key=nf68sBZ1FqJ86q9xzvWx";
+    var platURL = "https://www.quandl.com/api/v3/datasets/LPPM/PLAT?column_index=1&api_key=nf68sBZ1FqJ86q9xzvWx";
+    var ironURL = "https://www.quandl.com/api/v3/datasets/COM/FE_TJN?column_index=1&api_key=nf68sBZ1FqJ86q9xzvWx";
 
     var cobaltPrice = "";
     var cobaltDateRefreshed = "";
     var nickelPrice = "";
     var nickelDateRefreshed = "";
+    var platPrice = "";
+    var platDateRefreshed = "";
+    var ironPrice = "";
+    var ironDateRefreshed = "";
 
     //cobalt ajax call
     $.ajax({
@@ -16,13 +22,21 @@ $(document).ready(function () {
     })
         .done(function (response) {
             var results = response.dataset;
-            cobaltPrice = (results.data[0])[1];
-            console.log(results.name);
-            console.log(results.description);
-            console.log("price = " + cobaltPrice);
+            //price per oz
+            cobaltPrice = (((results.data[0])[1]) / 35274.62).toFixed(2);
             cobaltDateRefreshed = results.newest_available_date;
-            console.log("Price refreshed at " + cobaltDateRefreshed);
+        });
 
+    //iron ajax call
+    $.ajax({
+        url: ironURL,
+        method: "GET"
+    })
+        .done(function (response) {
+            var results = response.dataset;
+            //price per oz
+            ironPrice = (((results.data[0])[1]) / 35274.62).toFixed(4);
+            ironDateRefreshed = results.newest_available_date;
         });
 
     //nickel ajax call
@@ -32,19 +46,24 @@ $(document).ready(function () {
     })
         .done(function (response) {
             var results = response.dataset;
-            nickelPrice = (results.data[0])[1];
-            console.log(results.name);
-            console.log(results.description);
-            console.log("price = " + nickelPrice);
+            //price per oz
+            nickelPrice = (((results.data[0])[1]) / 35274.62).toFixed(2);
             nickelDateRefreshed = results.newest_available_date;
-            console.log("Price refreshed at " + nickelDateRefreshed);
-
         });
 
-    //iron, ammonia, nitrogen, hydrogen
+    //platinum ajax call
+    $.ajax({
+        url: platURL,
+        method: "GET"
+    })
+        .done(function (response) {
+            var results = response.dataset;
+            //price per oz
+            platPrice = (results.data[0])[1];
+            platDateRefreshed = results.newest_available_date;
+        });
 
-
-
+    //access firebase
     var database = firebase.database();
 
     var spectraRef = database.ref('spectraType');
@@ -69,6 +88,7 @@ $(document).ready(function () {
             "moid": "0.000083",
             "Group": "APO",
             "sharePrice": 10,
+            "composition": [.75, .20, .05]
         },
         {
             "name": "1989 ML",
@@ -80,7 +100,8 @@ $(document).ready(function () {
             "velocity": "4.889",
             "moid": "0.082029",
             "Group": "AMO",
-            "sharePrice": 20
+            "sharePrice": 20,
+            "composition": [.70, .20, .10]
         },
         {
             "name": "Nereus",
@@ -92,7 +113,8 @@ $(document).ready(function () {
             "velocity": "4.985",
             "moid": "0.003260",
             "Group": "APO",
-            "sharePrice": 30
+            "sharePrice": 30,
+            "composition": [.6, .3, .10]
         },
         {
             "name": "2011 UW158",
@@ -104,7 +126,8 @@ $(document).ready(function () {
             "velocity": "5.189",
             "moid": "0.002225",
             "Group": "APO",
-            "sharePrice": 30
+            "sharePrice": 30,
+            "composition": [.05, .5, .35, .1]
         },
         {
             "name": "Didymos",
@@ -116,7 +139,9 @@ $(document).ready(function () {
             "velocity": "5.162",
             "moid": "0.039291",
             "Group": "APO",
-            "sharePrice": 50
+            "sharePrice": 50,
+            "composition": [.55, .35, .10]
+
         },
         {
             "name": "1992 TC",
@@ -128,7 +153,8 @@ $(document).ready(function () {
             "velocity": "5.648",
             "moid": "0.166957",
             "Group": "AMO",
-            "sharePrice": 30
+            "sharePrice": 30,
+            "composition": [.55, .30, .15]
         },
         {
             "name": "1997 XF11",
@@ -140,11 +166,25 @@ $(document).ready(function () {
             "velocity": "6.546",
             "moid": "0.000442",
             "Group": "APO",
-            "sharePrice": 30
+            "sharePrice": 30,
+            "composition": [.50, .25, .25]
+        },
+        {
+            "name": "1992 BF",
+            "Type": "Xc",
+            "a": "0.908",
+            "e": "0.272",
+            "value": "2.90 billion",
+            "estProfit": "357.67 million",
+            "velocity": "6.982",
+            "moid": "0.062638",
+            "Group": "ATE",
+            "sharePrice": 30,
+            "composition": [.1, .6, .2, .1]
         }];
 
 
-    //build CAF array. 
+    //push properties into new arrays
     for (i = 0; i < asteroidObj.length; i++) {
         //Campodonico Accessibiility Factor (or the CAF)
         accessibility.push(asteroidObj[i].moid * asteroidObj[i].velocity * 10);
@@ -157,9 +197,6 @@ $(document).ready(function () {
             "</td><td>" + asteroidObj[i].sharePrice + "</td></tr>");
     }
 
-
-          
-      
 
     //on functions for firebase
     function gotData(snapshot) {
@@ -185,6 +222,7 @@ $(document).ready(function () {
         console.log(err);
     }
 
+    //user input functionality 
     $("#userSubmit").on("click", function (e) {
         e.preventDefault();
 
@@ -212,28 +250,24 @@ $(document).ready(function () {
 
             console.log(user);
 
-            for (i=0;i<asteroidObj.length;i++){
-                if (asteroidObj[i].Type===user.spectra){
+            for (i = 0; i < asteroidObj.length; i++) {
+                if (asteroidObj[i].Type === user.spectra) {
                     console.log("yessir");
                     console.log(asteroidObj[i].sharePrice);
-                    if (user.investAmt < asteroidObj[i].sharePrice){
+                    if (user.investAmt < asteroidObj[i].sharePrice) {
                         console.log("you do not have sufficient funds to invest in one share of this asteroid type");
-                    }else{
-                        var numOfShares = Math.floor(user.investAmt/asteroidObj[i].sharePrice);
+                    } else {
+                        var numOfShares = Math.floor(user.investAmt / asteroidObj[i].sharePrice);
                         console.log(numOfShares);
                     }
-                }else{}
+                } else { }
             }
         }
     });
 
 
 
-
-
-
-    console.log(asteroidObj);
-    /*pie chart*/
+    //pie chart
     google.charts.load("current", { packages: ["corechart"] });
     google.charts.setOnLoadCallback(drawChart);
     function drawChart() {
@@ -255,13 +289,15 @@ $(document).ready(function () {
         chart.draw(data, options);
     }
 
+    //build plotly asteroid graph
     var trace1 = {
         x: accessibility,
-        y: [10, 20, 30, 40, 50, 30, 15],
+        y: [10, 20, 30, 40, 50, 30, 15, 25],
         text: asteroidName,
         mode: 'markers',
         marker: {
-            size: [100, 100, 100, 100, 100, 100, 100],
+            //change marker size
+            size: 10,
             //change marker color
             color: 'rgb(128, 0, 128)',
             sizemode: 'area'
