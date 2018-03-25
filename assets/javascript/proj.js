@@ -344,17 +344,8 @@ $(document).ready(function () {
         method: "GET",
         }).then(function(newsResponse) {
         var newsResults = newsResponse.articles;   
-            
-            console.log(newsResults);
-            console.log(queryURL);  
         
         for (var i=0; i<6; i++) {
-            console.log(newsResults[i].title);
-            console.log(newsResults[i].source.name);
-            console.log(newsResults[i].description);
-            console.log(newsResults[i].publishedAt);
-            console.log(newsResults[i].url);
-            console.log(newsResults[i].urlToImage);
 
             var articles = $('<div>');
             articles.addClass('panel-body');
