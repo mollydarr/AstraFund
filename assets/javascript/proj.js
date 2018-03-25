@@ -320,7 +320,7 @@ $(document).ready(function () {
         },
         //change font
         font: {
-            family: 'Courier New, monospace',
+            family: 'Lato, monospace',
             size: 18,
             color: '#7f7f7f'
         }
