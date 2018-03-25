@@ -25,7 +25,7 @@ $(document).ready(function () {
 
         });
 
-        //nickel ajax call
+    //nickel ajax call
     $.ajax({
         url: nickelURL,
         method: "GET"
@@ -41,7 +41,7 @@ $(document).ready(function () {
 
         });
 
-    //iron, ammonia, nitrogen, hydrogen, nickel
+    //iron, ammonia, nitrogen, hydrogen
 
 
 
@@ -54,6 +54,7 @@ $(document).ready(function () {
     spectraRef.on("value", gotData, errData);
 
     var accessibility = [];
+    var asteroidName = [];
 
     //Asteroid Object
     var asteroidObj =
@@ -94,16 +95,16 @@ $(document).ready(function () {
             "sharePrice": 30
         },
         {
-            "name": "Bennu",
-            "Type": "B",
-            "a": "1.126",
-            "e": "0.204",
-            "value": "669.96 million",
-            "estProfit": "185.00 million",
-            "velocity": "5.096",
-            "moid": "0.003223",
+            "name": "2011 UW158",
+            "Type": "Xc",
+            "a": "1.621",
+            "e": "0.376",
+            "value": "6.69 billion",
+            "estProfit": "1.74 billion",
+            "velocity": "5.189",
+            "moid": "0.002225",
             "Group": "APO",
-            "sharePrice": 40
+            "sharePrice": 30
         },
         {
             "name": "Didymos",
@@ -116,6 +117,30 @@ $(document).ready(function () {
             "moid": "0.039291",
             "Group": "APO",
             "sharePrice": 50
+        },
+        {
+            "name": "1992 TC",
+            "Type": "X",
+            "a": "1.566",
+            "e": "0.292",
+            "value": "84.01 billion",
+            "estProfit": "16.78 billion",
+            "velocity": "5.648",
+            "moid": "0.166957",
+            "Group": "AMO",
+            "sharePrice": 30
+        },
+        {
+            "name": "1997 XF11",
+            "Type": "Xk",
+            "a": "1.443",
+            "e": "0.484",
+            "value": "383.99 billion",
+            "estProfit": "53.00 billion",
+            "velocity": "6.546",
+            "moid": "0.000442",
+            "Group": "APO",
+            "sharePrice": 30
         }];
 
     //build CAF array. 
@@ -123,6 +148,7 @@ $(document).ready(function () {
     for (i = 0; i < asteroidObj.length; i++) {
         //Campodonico Accessibiility Factor (or the CAF)
         accessibility.push(asteroidObj[i].moid * asteroidObj[i].velocity * 10);
+        asteroidName.push(asteroidObj[i].name);
         $("#asteroidTable tr:last").after("<tr><td>" + asteroidObj[i].name +
             "</td><td>" + asteroidObj[i].value +
             "</td><td>" + asteroidObj[i].estProfit +
@@ -215,11 +241,13 @@ $(document).ready(function () {
 
     var trace1 = {
         x: accessibility,
-        y: [10, 20, 30, 40, 50],
-        text: [asteroidObj[0].name, asteroidObj[1].name, asteroidObj[2].name, asteroidObj[3].name, asteroidObj[4].name],
+        y: [10, 20, 30, 40, 50, 30, 15],
+        text: asteroidName,
         mode: 'markers',
         marker: {
-            size: [100, 100, 100, 100, 100],
+            size: [100, 100, 100, 100, 100, 100, 100],
+            //change marker color
+            color: 'rgb(128, 0, 128)',
             sizemode: 'area'
         }
     };
@@ -229,6 +257,7 @@ $(document).ready(function () {
     var layout = {
         title: "Available Asteroids",
         showLegend: true,
+        //change graph size
         height: 400,
         width: 480,
         xaxis: {
@@ -236,6 +265,12 @@ $(document).ready(function () {
         },
         yaxis: {
             title: 'Price per Share (USD)',
+        },
+        //change font
+        font: {
+            family: 'Courier New, monospace',
+            size: 18,
+            color: '#7f7f7f'
         }
     };
 
