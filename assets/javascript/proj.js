@@ -199,8 +199,8 @@ $(document).ready(function () {
             "</td><td>" + asteroidObj[i].value +
             "</td><td>" + asteroidObj[i].estProfit +
             "</td><td>" + accessibility[i].toFixed(3) +
-            "</td><td>" + asteroidObj[i].Type  +
-            "</td><td>" + sharePriceArray[i]+ "</td></tr>");
+            "</td><td>" + asteroidObj[i].Type +
+            "</td><td>" + sharePriceArray[i] + "</td></tr>");
     }
 
     //on functions for firebase
@@ -222,7 +222,7 @@ $(document).ready(function () {
 
     };
 
-    $("#mktTrend").html("Last updated: "+ dateRefreshed+ "<br> Nickel: "+nickelPrice+" $/oz "+ "<br> Platinum: "+platPrice+" $/oz "+ "<br> Iron: "+ironPrice+" $/oz " + "<br> Cobalt: "+cobaltPrice+" $/oz ");
+    $("#mktTrend").html("Last updated: " + dateRefreshed + "<br> Nickel: " + nickelPrice + " $/oz " + "<br> Platinum: " + platPrice + " $/oz " + "<br> Iron: " + ironPrice + " $/oz " + "<br> Cobalt: " + cobaltPrice + " $/oz ");
 
     function errData(err) {
         console.log("error!");
@@ -257,14 +257,20 @@ $(document).ready(function () {
 
             console.log(user);
 
+
             for (i = 0; i < asteroidObj.length; i++) {
-                if (asteroidObj[i].Type === user.spectra) {
+                if ((asteroidObj[i].name + " (" + asteroidObj[i].Type + ")") === user.spectra) {
+                    //if (asteroidObj[i].Type === user.spectra) {
                     console.log("yessir");
-                    console.log(asteroidObj[i].sharePrice);
+                    //console.log(asteroidObj[i].sharePrice);
+                    console.log(sharePriceArray[i]);
                     if (user.investAmt < asteroidObj[i].sharePrice) {
+                        //if (user.investAmt < sharePriceArray[i]) {
+
                         console.log("you do not have sufficient funds to invest in one share of this asteroid type");
                     } else {
-                        var numOfShares = Math.floor(user.investAmt / asteroidObj[i].sharePrice);
+                        //var numOfShares = Math.floor(user.investAmt / asteroidObj[i].sharePrice);
+                        var numOfShares = Math.floor(user.investAmt / sharePriceArray[i]);
                         console.log(numOfShares);
                     }
                 } else { }
@@ -274,27 +280,27 @@ $(document).ready(function () {
 
 
 
-    //pie chart
-    google.charts.load("current", { packages: ["corechart"] });
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-            ['Task', 'Hours per Day'],
-            ['Invest1', 11],
-            ['Invest2', 2],
-            ['Invest3', 2],
-            ['Invest4', 2],
-            ['Invest5', 7]
-        ]);
+    // //pie chart
+    // google.charts.load("current", { packages: ["corechart"] });
+    // google.charts.setOnLoadCallback(drawChart);
+    // function drawChart() {
+    //     var data = google.visualization.arrayToDataTable([
+    //         ['Task', 'Hours per Day'],
+    //         ['Invest1', 11],
+    //         ['Invest2', 2],
+    //         ['Invest3', 2],
+    //         ['Invest4', 2],
+    //         ['Invest5', 7]
+    //     ]);
 
-        var options = {
-            title: 'Investment',
-            pieHole: 0.4,
-        };
+    //     var options = {
+    //         title: 'Investment',
+    //         pieHole: 0.4,
+    //     };
 
-        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-        chart.draw(data, options);
-    }
+    //     var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+    //     chart.draw(data, options);
+    // }
 
     //build plotly asteroid graph
     var trace1 = {
@@ -344,23 +350,23 @@ $(document).ready(function () {
     $.ajax({
         url: queryURL,
         method: "GET",
-        }).then(function(newsResponse) {
-        var newsResults = newsResponse.articles;   
-        
-        for (var i=0; i<6; i++) {
+    }).then(function (newsResponse) {
+        var newsResults = newsResponse.articles;
+
+        for (var i = 0; i < 6; i++) {
 
             var articles = $('<div>');
             articles.addClass('panel-body');
             articles.attr('id', 'articleSection-' + i);
             $('#articles').append(articles);
-            
+
             $('#articleSection-' + i).append("<h3>" + newsResults[i].title + "</3>" + "<br>");
             $('#articleSection-' + i).append("<h6>" + newsResults[i].description + "</h6>" + "<br>");
             $('#articleSection-' + i).append(newsResults[i].source.name + "<br>");
             $('#articleSection-' + i).append("Published:" + " " + newsResults[i].publishedAt + "<br>"); //add moment.js formatting to published date
-            $('#articleSection-' + i).append("<a href=" + newsResults[i].url +  ">" + "Read More" + "</a>" + "<br>");
+            $('#articleSection-' + i).append("<a href=" + newsResults[i].url + ">" + "Read More" + "</a>" + "<br>");
             //$('#articleSection-' + i).append("<img src=" + newsResults[i].urlToImage + ">");
-        }   
+        }
 
     }); // END NEWS API CALL
 
