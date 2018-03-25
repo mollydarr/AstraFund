@@ -121,17 +121,52 @@ html, body {
     background-size: cover;
   }
 
+#teamdiv {
+    position: relative;
+    left: 60px;
+}
+
+  #services.container {
+    width: 100%;
+}
+
+#serviceTitle {
+    text-align: center;
+    color: #eee;
+}
+
   #services {
     /* background-image: url("../images/starbackground1.jpg"); */
-    background-color: #306d9f;
+    background-color: #272952;
     color: #306d9f;
-    color: #7cabc7;
+    /* color: #7cabc7; */
   }
+
+  /* #userInputDash.container{
+    width: 100%;
+  }
+
+  #userInputDash {
+    background-color: #dbd6d6;
+  } */
+
+  #investDash {
+      padding: 0px 30px;
+  }
+
+  #mktTrend {
+      padding: 0px 30px;
+  }
+
+#plotGraph {
+    padding: 0px 30px;
+    margin-bottom: 25px;
+}
 
   .teaminfobox {
       height: 250px;
       width: 250px;
-      background-color: #0059ff;
+      background-color: #12336f;
       color: rgb(247, 240, 240); 
       font-family: "Lato", sans-serif;
       font-size: 23px;
@@ -149,6 +184,45 @@ html, body {
     background-color: #d2e4ec;
 }
 
+#aboutcontent {
+    position: relative;
+    left: 116px;
+    top: 18px;
+}
+
+#articles.container {
+        width: 100%;
+        background-color: #d2e4ec;
+}
+
+#articlesdiv {
+    position: relative;
+    left: 60px;
+}
+
+#team.container {
+    width: 100%;
+    background-color: #d2e4ec;
+
+}
+
+div.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 18rem;
+}
+
+h2.contentTitle {
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+}
+
+
   #productTitle {
       color: #FFFFFF;
   }
@@ -164,42 +238,18 @@ html, body {
     vertical-align: middle;
     width: 140px;
   }
+#asteroidListDiv {
+    padding: 0px 30px;
+}
 
-
-  #userInputDash {
+  /* #userInputDash {
       background-color:#dbd6d6;
-  }
-  #information {
-    background: url(../images/estate.jpg) no-repeat center center fixed;
-    display: table;
-    height: 800px;
-    position: relative;
-    width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  #information .panel {
-    opacity: 0.85;
-  }
-  #google_map {
-    height: 500px;
-  }
-  footer {
-    padding: 20px 0;
-  }
-  footer .glyphicon {
-    color: #333333;
-    font-size: 60px;
-  }
-  footer .glyphicon:hover {
-    color: #306d9f;
-  }
-
+  } */
+ 
   /* Asteroid form -section two - services/products */
 
   #asteroidForm {
+      padding: 0px 30px;
       /* width: 50%; */
       /* margin: auto; */
       /* margin-left: 20px; */
@@ -295,7 +345,7 @@ figure.hover-bio:hover img {
  
 figure.hover-bio:hover figcaption{
     /* background-color: #E91E63; */
-    background-color: #0059ff;
+    background-color: #022057;
     color: #fff;
             opacity: .9;
     -moz-transform: translate3d(0, -100%, 0);
@@ -420,7 +470,7 @@ figure.hover-bio:hover figcaption{
 
 /* SLIDER STYLE */
 
-.slider::-webkit-slider-thumb {
+ .slider::-webkit-slider-thumb { 
     -webkit-appearance: none;
     appearance: none;
     width: 23px;
@@ -436,6 +486,6 @@ figure.hover-bio:hover figcaption{
     border: 0;
     background-image: url("../images/rocket.png");
     cursor: pointer;
-}
+} 
 
 /* CONTACT FORM CODE ENDS */

@@ -143,8 +143,8 @@ $(document).ready(function () {
             "sharePrice": 30
         }];
 
-    //build CAF array. 
 
+    //build CAF array. 
     for (i = 0; i < asteroidObj.length; i++) {
         //Campodonico Accessibiility Factor (or the CAF)
         accessibility.push(asteroidObj[i].moid * asteroidObj[i].velocity * 10);
@@ -157,6 +157,9 @@ $(document).ready(function () {
             "</td><td>" + asteroidObj[i].sharePrice + "</td></tr>");
     }
 
+
+          
+      
 
     //on functions for firebase
     function gotData(snapshot) {
@@ -208,6 +211,19 @@ $(document).ready(function () {
             $(".table-input").val("");
 
             console.log(user);
+
+            for (i=0;i<asteroidObj.length;i++){
+                if (asteroidObj[i].Type===user.spectra){
+                    console.log("yessir");
+                    console.log(asteroidObj[i].sharePrice);
+                    if (user.investAmt < asteroidObj[i].sharePrice){
+                        console.log("you do not have sufficient funds to invest in one share of this asteroid type");
+                    }else{
+                        var numOfShares = Math.floor(user.investAmt/asteroidObj[i].sharePrice);
+                        console.log(numOfShares);
+                    }
+                }else{}
+            }
         }
     });
 
