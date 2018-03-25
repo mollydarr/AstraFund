@@ -338,7 +338,7 @@ $(document).ready(function () {
 
     //BEGIN NEWS API CALL
     var authKey = "70bfc5198b3b423ea769653ec3efde37";
-    var queryURL = "https://newsapi.org/v2/everything?q=asteroid+mining&language=en&sortBy=popularity&apiKey=" + authKey;
+    var queryURL = "https://newsapi.org/v2/everything?q=asteroid+mining&apiKey=" + authKey;
     var articleCounter = 0;
 
     $.ajax({
