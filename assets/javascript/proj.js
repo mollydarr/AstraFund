@@ -198,8 +198,8 @@ $(document).ready(function () {
         $("#asteroidTable tr:last").after("<tr><td>" + asteroidObj[i].name +
             "</td><td>" + asteroidObj[i].value +
             "</td><td>" + asteroidObj[i].estProfit +
-            "</td><td>" + accessibility[i] +
-            "</td><td>" + "placeholder" +
+            "</td><td>" + accessibility[i].toFixed(3) +
+            "</td><td>" + asteroidObj[i].Type  +
             "</td><td>" + sharePriceArray[i]+ "</td></tr>");
     }
 
@@ -221,6 +221,8 @@ $(document).ready(function () {
         };
 
     };
+
+    $("#mktTrend").html("Last updated: "+ dateRefreshed+ "<br> Nickel: "+nickelPrice+" $/oz "+ "<br> Platinum: "+platPrice+" $/oz "+ "<br> Iron: "+ironPrice+" $/oz " + "<br> Cobalt: "+cobaltPrice+" $/oz ");
 
     function errData(err) {
         console.log("error!");
