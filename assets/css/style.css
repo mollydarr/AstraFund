@@ -11,6 +11,12 @@ body, html {
     /* background-image: url("../images/starbackground1.jpg"); */
 }
 
+img {
+    border-radius: 8px;
+    display: block;
+
+}
+
 .pimg1, .pimg2, .pimg3 {
     position: relative;
     opacity: 0.70;
@@ -190,6 +196,10 @@ html, body {
     position: relative;
     left: 116px;
     top: 18px;
+}
+
+.card-img-top {
+    max-width: 250px;
 }
 
 #articles.container {

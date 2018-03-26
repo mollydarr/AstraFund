@@ -336,6 +336,7 @@ $(document).ready(function () {
         //change graph size
         height: 400,
         width: 480,
+        
         xaxis: {
             title: 'Accessibility Factor (CAF)',
         },
