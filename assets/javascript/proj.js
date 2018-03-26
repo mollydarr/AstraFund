@@ -237,7 +237,7 @@ $(document).ready(function () {
 
         var date = $("#date-input").val();
 
-        var investAmt = $("#investment-input").val().trim();
+        var investAmt = parseInt($("#investment-input").val().trim());
 
         var spectra = $("#spectra").val();
 
@@ -261,17 +261,23 @@ $(document).ready(function () {
             for (i = 0; i < asteroidObj.length; i++) {
                 if ((asteroidObj[i].name + " (" + asteroidObj[i].Type + ")") === user.spectra) {
                     //if (asteroidObj[i].Type === user.spectra) {
-                    console.log("yessir");
+                    //console.log("yessir");
                     //console.log(asteroidObj[i].sharePrice);
-                    console.log(sharePriceArray[i]);
-                    if (user.investAmt < asteroidObj[i].sharePrice) {
-                        //if (user.investAmt < sharePriceArray[i]) {
-
-                        console.log("you do not have sufficient funds to invest in one share of this asteroid type");
+                    //console.log("user investment = " + user.investAmt);
+                    //console.log("share price array =" + sharePriceArray)
+                    var selectedAsteroid = i;
+                    //console.log("sel aster = " + selectedAsteroid);
+                    //console.log("asteroid name = " + asteroidObj[selectedAsteroid].name);
+                    //console.log("share price = "+sharePriceArray[selectedAsteroid]);
+                    //if (user.investAmt < asteroidObj[i].sharePrice) {
+                    if (user.investAmt < sharePriceArray[selectedAsteroid]) {
+                        $("#insufficientFunds").text("Insufficient Funds");
+                        //console.log("you do not have sufficient funds to invest in one share of this asteroid type");
                     } else {
                         //var numOfShares = Math.floor(user.investAmt / asteroidObj[i].sharePrice);
-                        var numOfShares = Math.floor(user.investAmt / sharePriceArray[i]);
-                        console.log(numOfShares);
+                        var numOfShares = Math.floor(user.investAmt / sharePriceArray[selectedAsteroid]);
+                        //console.log("#shares = " + numOfShares);
+                        $("#insufficientFunds").text(numOfShares);
                     }
                 } else { }
             }
@@ -367,8 +373,8 @@ $(document).ready(function () {
             $('#articleSection-' + i).append(newsResults[i].source.name + "<br>");
             $('#articleSection-' + i).append("Published:" + " " + newsResults[i].publishedAt + "<br>"); //add moment.js formatting to published date
 
-            $('#articleSection-' + i).append("<a href=" + newsResults[i].url +  ">" + "Read More" + "</a>" + "<br>");
-        }   
+            $('#articleSection-' + i).append("<a href=" + newsResults[i].url + ">" + "Read More" + "</a>" + "<br>");
+        }
 
 
     }); // END NEWS API CALL
