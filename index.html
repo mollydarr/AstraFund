@@ -159,17 +159,31 @@
                 <!-- <div class="row" id="topSectionMarket"> -->
                 <!-- <div class="marketTrendPlot"> -->
                 <div class="row" id="topSectionServ">
-                    <div class="col-md-6" >
+                    <div class="col-md-6" id="mktTrend1">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Market Trends</h3>
                             </div>
                             <div class="panel-body">
-                                <form>
+                                <!-- <form>
                                     <div class="form-group" id="mktTrend">
                                     </div>
+                                </form> -->
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Nickel</th>
+                                            <th scope="col">Platinum</th>
+                                            <th scope="col">Iron</th>
+                                            <th scope="col">Cobalt</th>
+                                            <th scope="col">Last Updated</th>
+                                            <!-- <th scope="col">Percent Change</th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody id="mktTrend">
+                                    </tbody>
+                                </table>
 
-                                </form>
                             </div>
                         </div>
                     </div>
@@ -316,29 +330,29 @@
         <section class - "section section-light">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="panel-body" id="articleSection-0"></div> 
-                </div>
-
-                 <div class="col-md-4">
-                    <div class="panel-body" id="articleSection-1"></div> 
+                    <div class="panel-body" id="articleSection-0"></div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="panel-body" id="articleSection-2"></div> 
+                    <div class="panel-body" id="articleSection-1"></div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="panel-body" id="articleSection-2"></div>
                 </div>
 
             </div>
 
             <div class="row">
                 <div class="col-md-4">
-                    <div class="panel-body" id="articleSection-3"></div> 
+                    <div class="panel-body" id="articleSection-3"></div>
                 </div>
                 <div class="col-md-4">
-                    <div class="panel-body" id="articleSection-4"></div> 
+                    <div class="panel-body" id="articleSection-4"></div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="panel-body" id="articleSection-5"></div> 
+                    <div class="panel-body" id="articleSection-5"></div>
                 </div>
 
             </div>
@@ -383,10 +397,9 @@
 
                     <div class="col-md-4">
                         <h1 class="teaminfobox">
+                            <br> AstraFund's team is dedicated to you and your financial goals.
                             <br>
-                            AstraFund's team is dedicated to you and your financial goals.
-                            <br><br> 
-                            Take the Aster-risk with AstraFund.
+                            <br> Take the Aster-risk with AstraFund.
                         </h1>
                     </div>
                     <!--closing div tag for Team info box-->
@@ -566,9 +579,11 @@
 
     <!--FOOTER SECTION -->
     <footer class="footer">
-            <div class="container">
-              <span class="text-muted"><p>&copy; 2018 AstraFund</p></span>
-            </div>
+        <div class="container">
+            <span class="text-muted">
+                <p>&copy; 2018 AstraFund</p>
+            </span>
+        </div>
     </footer>
 </body>
 
