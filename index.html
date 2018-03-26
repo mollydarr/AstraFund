@@ -93,7 +93,9 @@
         <section class - "section section-light">
             <!-- <h2> ABOUT</h2> -->
 
-            <!--FIRST CARD-->
+           
+
+            <!-- FIRST CARD -->
             <div id="aboutcontent">
                 <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
@@ -107,23 +109,23 @@
                         </div>
                     </div>
                 </div>
-                <!--END COLUMN 4-->
-                <!--SECOND CARD-->
-                <div class="col-md-4">
+            <!--END COLUMN 4-->
+            <!--SECOND CARD-->
+            <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="./assets/images/2.png" alt="Card image cap">
                         <div class="card-body">
                             <p class="card-text">
                                 <h2 class="contentTitle">Near Earth</h2>
-                                The initial targets for mining are those that pass through Earth’s neighborhood. Many water-rich Near Earth Asteroids (NEAs)
-                                are easy to access as they travel around the Sun in very similar orbits to Earth. The asteroid
-                                belt is located in between the planets Mars and Jupiter.
+                                The initial targets are asteroids that pass through Earth’s neighborhood.  Near Earth Asteroids (NEAs)
+                                are easy to access as they travel around the Sun in similar orbits to Earth. The asteroid
+                                belt is located in between Mars and Jupiter.
                             </p>
                         </div>
                     </div>
                 </div>
-                <!--THIRD CARD-->
-                <div class="col-md-4">
+            <!--THIRD CARD-->
+            <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="./assets/images/3.png" alt="Card image cap">
                         <div class="card-body">
@@ -137,7 +139,7 @@
         </section>
 
 
-        </div>
+    </div>
 
     </div>
     <!--SERVICES/PRODUCT PARALLAX IMAGE-->
@@ -152,25 +154,38 @@
     <div id="services" class="container">
 
         <section class - "section section-dark">
-            <h2 id="serviceTitle">Services/Product</h2>
+            <h2 id="serviceTitle">Investment Platform</h2>
             <div class="row">
                 <!-- <div class="container" id="serviceSection"> -->
                 <!--MARKET TRENDS -->
                 <!-- <div class="row" id="topSectionMarket"> -->
                 <!-- <div class="marketTrendPlot"> -->
                 <div class="row" id="topSectionServ">
-                    <div class="col-md-6" id="mktTrend">
+                    <div class="col-md-6" id="mktTrend1">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Market Trends</h3>
                             </div>
                             <div class="panel-body">
-                                <form>
-                                    <div class="form-group">
-
+                                <!-- <form>
+                                    <div class="form-group" id="mktTrend">
                                     </div>
+                                </form> -->
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Nickel</th>
+                                            <th scope="col">Platinum</th>
+                                            <th scope="col">Iron</th>
+                                            <th scope="col">Cobalt</th>
+                                            <th scope="col">Last Updated</th>
+                                            <!-- <th scope="col">Percent Change</th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody id="mktTrend">
+                                    </tbody>
+                                </table>
 
-                                </form>
                             </div>
                         </div>
                     </div>
@@ -218,7 +233,7 @@
 
                                                     <!-- <option value="audi">Audi</option> -->
                                                 </select>
-
+                                                <h3 id="insufficientFunds"> </h3>
                                                 <br>
                                                 <br> </form>
                                         </div>
@@ -239,20 +254,21 @@
                                             <table class="table table-striped">
                                                 <thead>
                                                     <tr>
+                                                        <th scope="col">Date</th>
                                                         <th scope="col">Asteroid Name</th>
                                                         <th scope="col">Type</th>
-                                                        <th scope="col">Composition</th>
-                                                        <th scope="col">Share Value</th>
-                                                        <th scope="col">Percent Change</th>
+                                                        <th scope="col">Amount Invested</th>
+                                                        <!-- <th scope="col">Share Value</th> -->
+                                                        <!-- <th scope="col">Percent Change</th> -->
                                                     </tr>
                                                 </thead>
                                                 <tbody id="investDash">
                                                 </tbody>
                                             </table>
                                             <!--graph start-->
-                                            <div id="graph">
+                                            <!-- <div id="graph">
                                                 <div id="donutchart" style="width: 500px; height: 300px;"></div>
-                                            </div>
+                                            </div> -->
                                             <!--graph end-->
                                         </div>
                                     </div>
@@ -271,7 +287,7 @@
                     <div class="col-lg-12" id="asteroidListDiv">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Asteroid List (from firebase)</h3>
+                                <h3 class="panel-title">Asteroid List </h3>
                             </div>
                             <div class="panel-body">
                                 <table class="table table-striped" id="asteroidTable">
@@ -281,7 +297,7 @@
                                             <th scope="col">Value</th>
                                             <th scope="col">Profit</th>
                                             <th scope="col">Accessibility Factor</th>
-                                            <th scope="col">I can buy x amnt of shares</th>
+                                            <th scope="col">Type</th>
                                             <th scope="col">Value per share</th>
                                         </tr>
                                     </thead>
@@ -313,110 +329,37 @@
     <!--ARTICLES INFO-->
 
     <div id="articles" class="container">
-            <section class - "section section-light">
-    
-                <!--ARTICLE 1 !-->
-                <div id="articlesdiv">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="./assets/images/What.png" alt="Card image cap">
-                                <div class="card-body">
-                                    <p class="card-text">
-                                        <h2 class="contentTitle">Article 1</h2>
-                                            Article 1 Description
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <!-- closing div tag for Article 1 pic -->
-                        <!--ARTICLE 2 !-->
-                        <div class="col-md-4">
-                            <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="./assets/images/What.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                             <h2 class="contentTitle">Article 2</h2>
-                                                    Article 2 Description
-                                        </p>
-                                    </div>
-                            </div>
-                        </div>
-                        <!--closing div tag for Article 2 Pic-->
-
-                        <!--ARTICLE 3 !-->
-                        <div class="col-md-4">
-                            <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="./assets/images/What.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                             <h2 class="contentTitle">Article 3</h2>
-                                                Article 3 Description
-                                        </p>
-                                    </div>
-                            </div>
-                        </div>
-                        <!--closing div tag for Article 3 Pic-->
-                    </div>
-                    <!-- Closing Div Tag for First Row for Articles -->
-    
-
-                    <!-- Second Row Articles Starts -->
-
-                    <!--ARTICLE 4 !-->
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="./assets/images/What.png" alt="Card image cap">
-                                    <div class="card-body">
-                                       <p class="card-text">
-                                            <h2 class="contentTitle">Article 4</h2>
-                                                Article 4 Description
-                                       </p>
-                                    </div>
-                            </div>
-                        </div>
-                        <!-- closing tag for Article 4 pic-->
-    
-                       <!--ARTICLE 5 !-->
-                        <div class="col-md-4">
-                            <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="./assets/images/What.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <p class="card-text">
-                                            <h2 class="contentTitle">Article 5</h2>
-                                                    Article 5 Description
-                                        </p>
-                                    </div>
-                            </div>
-                        </div>
-                        <!--cloing div tag for Article 5 pic -->
-
-                        <!--ARTICLE 6 !-->
-                        <div class="col-md-4">
-                            <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="./assets/images/What.png" alt="Card image cap">
-                                <div class="card-body">
-                                     <p class="card-text">
-                                            <h2 class="contentTitle">Article 6</h2>
-                                                 Article 6 Description
-                                     </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- closing div tag for Article 6-->
-    
-                    </div>
-                    <!--Closing Tag for Second Row of Articles-->
+        <section class - "section section-light">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel-body" id="articleSection-0"></div>
                 </div>
-        </div>
-    
+
+                <div class="col-md-4">
+                    <div class="panel-body" id="articleSection-1"></div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="panel-body" id="articleSection-2"></div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel-body" id="articleSection-3"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel-body" id="articleSection-4"></div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="panel-body" id="articleSection-5"></div>
+                </div>
+
+            </div>
+    </div>
     <!-- ARTICLES SECTION ENDS -->
-
-
-
-
 
     <!-- STAR TEAM PARALLAX IMAGE -->
 
@@ -442,7 +385,7 @@
                         <div class="hover-bio-wrapper">
                             <div class="hover-bio">
                                 <figure class="hover-bio">
-                                    <img src="./assets/images/snehaHead.jpeg">
+                                    <img src="./assets/images/brant.jpg">
                                     <figcaption>
                                         <h2>BRANT CAMPODONICO</h2>
                                         <p>BACK-END DEV</p>
@@ -456,8 +399,10 @@
 
                     <div class="col-md-4">
                         <h1 class="teaminfobox">
-                            AstraFund's team is dedicated to bringing you one step closer to the stars by ensuring that you are in safe hands while making
-                            your financial investment. Take the Aster-risk with AstraFund.
+                            <br>
+                            <br> AstraFund's team is dedicated to you and your financial goals.
+                            <br>
+                            <br> Take the Aster-risk with AstraFund.
                         </h1>
                     </div>
                     <!--closing div tag for Team info box-->
@@ -501,7 +446,7 @@
                         <div class="hover-bio-wrapper">
                             <div class="hover-bio">
                                 <figure class="hover-bio">
-                                    <img src="./assets/images/snehaHead.jpeg">
+                                    <img src="./assets/images/keelyHead.JPG">
                                     <figcaption>
                                         <h2>KEELY BRENNAN</h2>
                                         <p>BACK-END DEV</p>
@@ -556,8 +501,7 @@
     <div id="contact" class="container">
 
         <section class - "section section-dark">
-            <h2 id="brand">
-                <span>Astra</span>Fund</h2>
+            <h2 id="brand">AstraFund</h2>
             <div class="wrapper animated bounceInLeft">
                 <div class="company-info">
                     <h3>AstraFund</h3>
@@ -565,7 +509,7 @@
                         <li>
                             <i class="fa fa-road"></i> 44 something st</li>
                         <li>
-                            <i class="fa fa-phone"></i> Phone Number</li>
+                            <i class="fa fa-phone"></i> (123) 456-7890</li>
                         <li>
                             <i class="fa fa-envelope"></i> test@asteroid.com</li>
                     </ul>
@@ -598,14 +542,14 @@
                             <input type="text" name="phone">
                         </p>
                         <!--SLIDER-->
-                        <h3>Invest</h3>
+                        <!-- <h3>Invest</h3>
 
                         <div class="slidecontainer">
                             <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
                             <p>Value:
                                 <span id="demo"></span>
                             </p>
-                        </div>
+                        </div> -->
                         <!--END SLIDER-->
                         <!--USER MESSAGE-->
                         <p class="full">
@@ -638,9 +582,11 @@
 
     <!--FOOTER SECTION -->
     <footer class="footer">
-            <div class="container">
-              <span class="text-muted"><p>&copy; 2018 AstraFund</p></span>
-            </div>
+        <div class="container">
+            <span class="text-muted">
+                <p>&copy; 2018 AstraFund</p>
+            </span>
+        </div>
     </footer>
 </body>
 

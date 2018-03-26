@@ -11,6 +11,12 @@ body, html {
     /* background-image: url("../images/starbackground1.jpg"); */
 }
 
+img {
+    border-radius: 8px;
+    display: block;
+
+}
+
 .pimg1, .pimg2, .pimg3 {
     position: relative;
     opacity: 0.70;
@@ -163,9 +169,13 @@ html, body {
     margin-bottom: 25px;
 }
 
+
   .teaminfobox {
       height: 250px;
       width: 250px;
+      border-radius: 8px;
+      line-height: 1em;
+      letter-spacing: .5px;
       background-color: #12336f;
       color: rgb(247, 240, 240); 
       font-family: "Lato", sans-serif;
@@ -173,6 +183,7 @@ html, body {
       text-align: center;
       position: relative;
       bottom: 20px;
+      padding: 10px;
      
 
   }
@@ -188,6 +199,10 @@ html, body {
     position: relative;
     left: 116px;
     top: 18px;
+}
+
+.card-img-top {
+    max-width: 250px;
 }
 
 #articles.container {
@@ -281,7 +296,7 @@ figure.hover-bio {
  
 figure.hover-bio::before, figure.hover-bio::after{
     position: absolute;
-    background: black;
+    background: #0000;
             opacity: 0.3;
             content: '';
     height: 100%;
@@ -364,7 +379,10 @@ figure.hover-bio:hover figcaption{
 *{
     box-sizing: border-box;
 }
-
+.container#contact {
+    background-color: #d2e4ec;
+    width: 100%;
+}
 .container{
     /* max-width: 1170px; */
     margin-left: auto;
@@ -489,3 +507,8 @@ figure.hover-bio:hover figcaption{
 } 
 
 /* CONTACT FORM CODE ENDS */
+
+/* NEWS ARTICLES IMAGE FORMAT */
+.articleSection- {
+    width: 300px;
+}
