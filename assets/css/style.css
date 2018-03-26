@@ -170,10 +170,13 @@ html, body {
     margin-bottom: 25px;
 }
 
+
   .teaminfobox {
       height: 250px;
       width: 250px;
+      border-radius: 8px;
       line-height: 1em;
+      letter-spacing: .5px;
       background-color: #12336f;
       color: rgb(247, 240, 240); 
       font-family: "Lato", sans-serif;
