@@ -344,7 +344,7 @@ $(document).ready(function () {
 
     //BEGIN NEWS API CALL
     var authKey = "70bfc5198b3b423ea769653ec3efde37";
-    var queryURL = "https://newsapi.org/v2/everything?q=asteroid+mining&language=en&sortBy=popularity&apiKey=" + authKey;
+    var queryURL = "https://newsapi.org/v2/everything?q=asteroid+mining&apiKey=" + authKey;
     var articleCounter = 0;
 
     $.ajax({
@@ -360,13 +360,16 @@ $(document).ready(function () {
             articles.attr('id', 'articleSection-' + i);
             $('#articles').append(articles);
 
+            $('#articleSection-' + i).append("<img src=" + newsResults[i].urlToImage + " height='200' width='250'>");
+
             $('#articleSection-' + i).append("<h3>" + newsResults[i].title + "</3>" + "<br>");
             $('#articleSection-' + i).append("<h6>" + newsResults[i].description + "</h6>" + "<br>");
             $('#articleSection-' + i).append(newsResults[i].source.name + "<br>");
             $('#articleSection-' + i).append("Published:" + " " + newsResults[i].publishedAt + "<br>"); //add moment.js formatting to published date
-            $('#articleSection-' + i).append("<a href=" + newsResults[i].url + ">" + "Read More" + "</a>" + "<br>");
-            //$('#articleSection-' + i).append("<img src=" + newsResults[i].urlToImage + ">");
-        }
+
+            $('#articleSection-' + i).append("<a href=" + newsResults[i].url +  ">" + "Read More" + "</a>" + "<br>");
+        }   
+
 
     }); // END NEWS API CALL
 
