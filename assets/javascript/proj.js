@@ -90,8 +90,8 @@ $(document).ready(function () {
             "velocity": "4.664",
             "moid": "0.000083",
             "Group": "APO",
-            "sharePrice": 20,
-            "composition": [0, .85, .10, .05]
+            //"sharePrice": 20,
+            "composition": [0, .80, .05, .15]
         },
         {
             "name": "1989 ML",
@@ -103,7 +103,7 @@ $(document).ready(function () {
             "velocity": "4.889",
             "moid": "0.082029",
             "Group": "AMO",
-            "sharePrice": 20,
+            //"sharePrice": 20,
             "composition": [0, .75, .15, .10]
         },
         {
@@ -116,7 +116,7 @@ $(document).ready(function () {
             "velocity": "4.985",
             "moid": "0.003260",
             "Group": "APO",
-            "sharePrice": 30,
+            //"sharePrice": 30,
             "composition": [0, .7, .2, .10]
         },
         {
@@ -129,7 +129,7 @@ $(document).ready(function () {
             "velocity": "5.189",
             "moid": "0.002225",
             "Group": "APO",
-            "sharePrice": 30,
+            //"sharePrice": 30,
             "composition": [.02, .5, .35, .13]
         },
         {
@@ -142,7 +142,7 @@ $(document).ready(function () {
             "velocity": "5.162",
             "moid": "0.039291",
             "Group": "APO",
-            "sharePrice": 50,
+            //"sharePrice": 50,
             "composition": [0, .6, .30, .10]
 
         },
@@ -156,7 +156,7 @@ $(document).ready(function () {
             "velocity": "5.648",
             "moid": "0.166957",
             "Group": "AMO",
-            "sharePrice": 30,
+            //"sharePrice": 30,
             "composition": [0, .55, .25, .20]
         },
         {
@@ -169,7 +169,7 @@ $(document).ready(function () {
             "velocity": "6.546",
             "moid": "0.000442",
             "Group": "APO",
-            "sharePrice": 30,
+            //"sharePrice": 30,
             "composition": [0, .53, .22, .25]
         },
         {
@@ -182,7 +182,7 @@ $(document).ready(function () {
             "velocity": "6.982",
             "moid": "0.062638",
             "Group": "ATE",
-            "sharePrice": 30,
+            //"sharePrice": 30,
             "composition": [.02, .6, .2, .18]
         }];
 
@@ -316,7 +316,7 @@ $(document).ready(function () {
     //build plotly asteroid graph
     var trace1 = {
         x: accessibility,
-        y: [10, 20, 30, 40, 50, 30, 15, 25],
+        y: sharePriceArray,
         text: asteroidName,
         mode: 'markers',
         marker: {
