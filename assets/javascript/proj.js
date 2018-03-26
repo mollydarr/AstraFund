@@ -237,7 +237,7 @@ $(document).ready(function () {
     }
 
     function userData(snapshot) {
-        $("#investDash").empty();
+        //$("#userInvest").empty();
 
         var userInvestData = snapshot.val();
         console.log(userInvestData);
@@ -256,7 +256,7 @@ $(document).ready(function () {
 
             $("<td scope='col'>").text("$"+userInvestData[k].investAmt).appendTo(newRow);
 
-            $("#investDash").append(newRow);
+            $("#userInvest").append(newRow);
 
         }
     }
