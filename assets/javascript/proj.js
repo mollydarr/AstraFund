@@ -203,6 +203,13 @@ $(document).ready(function () {
             "</td><td>" + sharePriceArray[i] + "</td></tr>");
     }
 
+    $("#mktTrend").append("<tr><td>" + nickelPrice +
+            " $/oz </td><td>" + platPrice +
+            " $/oz </td><td>" + ironPrice +
+            " $/oz </td><td>" + cobaltPrice +
+            " $/oz </td><td>" + dateRefreshed + "</td></tr>");
+    
+
     //on functions for firebase
     function gotData(snapshot) {
 
@@ -221,8 +228,6 @@ $(document).ready(function () {
         };
 
     };
-
-    $("#mktTrend").html("Last updated: " + dateRefreshed + "<br> Nickel: " + nickelPrice + " $/oz " + "<br> Platinum: " + platPrice + " $/oz " + "<br> Iron: " + ironPrice + " $/oz " + "<br> Cobalt: " + cobaltPrice + " $/oz ");
 
     function errData(err) {
         console.log("error!");
@@ -277,7 +282,7 @@ $(document).ready(function () {
                         //var numOfShares = Math.floor(user.investAmt / asteroidObj[i].sharePrice);
                         var numOfShares = Math.floor(user.investAmt / sharePriceArray[selectedAsteroid]);
                         //console.log("#shares = " + numOfShares);
-                        $("#insufficientFunds").text(numOfShares);
+                        $("#insufficientFunds").text(numOfShares+" shares invested");
                     }
                 } else { }
             }
