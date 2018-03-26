@@ -74,7 +74,7 @@ $(document).ready(function () {
 
     spectraRef.on("value", gotData, errData);
 
-    userRef.once("value", userData, errData);
+    userRef.on("value", userData, errData);
 
     var accessibility = [];
     var asteroidName = [];
@@ -258,7 +258,7 @@ $(document).ready(function () {
 
             $("<td scope='col'>").text(userInvestData[k].investAmt).appendTo(newRow);
 
-            $("#tableBody").append(newRow);
+            $("#investDash").append(newRow);
 
         }
     }
