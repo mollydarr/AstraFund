@@ -192,6 +192,10 @@ html, body {
     top: 18px;
 }
 
+.card-img-top {
+    max-width: 250px;
+}
+
 #articles.container {
         width: 100%;
         background-color: #d2e4ec;
