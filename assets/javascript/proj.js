@@ -74,6 +74,8 @@ $(document).ready(function () {
 
     spectraRef.on("value", gotData, errData);
 
+    userRef.once("value",userData,errData);
+
     var accessibility = [];
     var asteroidName = [];
     var sharePriceArray = [];
@@ -232,6 +234,13 @@ $(document).ready(function () {
     function errData(err) {
         console.log("error!");
         console.log(err);
+    }
+
+    function userData(snapshot){
+        $("#investDash").empty();
+
+        var userInvestData = snapshot.val();
+        console.log(userInvestData);
     }
 
     //user input functionality 
