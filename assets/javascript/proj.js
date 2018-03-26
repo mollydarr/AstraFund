@@ -74,6 +74,8 @@ $(document).ready(function () {
 
     spectraRef.on("value", gotData, errData);
 
+    userRef.once("value", userData, errData);
+
     var accessibility = [];
     var asteroidName = [];
     var sharePriceArray = [];
@@ -204,11 +206,11 @@ $(document).ready(function () {
     }
 
     $("#mktTrend").append("<tr><td>" + nickelPrice +
-            " $/oz </td><td>" + platPrice +
-            " $/oz </td><td>" + ironPrice +
-            " $/oz </td><td>" + cobaltPrice +
-            " $/oz </td><td>" + dateRefreshed + "</td></tr>");
-    
+        " $/oz </td><td>" + platPrice +
+        " $/oz </td><td>" + ironPrice +
+        " $/oz </td><td>" + cobaltPrice +
+        " $/oz </td><td>" + dateRefreshed + "</td></tr>");
+
 
     //on functions for firebase
     function gotData(snapshot) {
@@ -232,6 +234,33 @@ $(document).ready(function () {
     function errData(err) {
         console.log("error!");
         console.log(err);
+    }
+
+    function userData(snapshot) {
+        $("#investDash").empty();
+
+        var userInvestData = snapshot.val();
+        console.log(userInvestData);
+
+        var userKeys = Object.keys(userInvestData);
+        console.log(userKeys);
+
+        for (i = 0; i < userKeys.length; i++) {
+            var newRow = $("<tr>");
+
+            var k = userKeys[i];
+
+            $("<td scope='col'>").text(userInvestData[k].date).appendTo(newRow);
+
+            $("<td scope='col'>").text(userInvestData[k].spectra).appendTo(newRow);
+
+            $("<td scope='col'>").text(userInvestData[k].spectra).appendTo(newRow);
+
+            $("<td scope='col'>").text(userInvestData[k].investAmt).appendTo(newRow);
+
+            $("#tableBody").append(newRow);
+
+        }
     }
 
     //user input functionality 
@@ -282,7 +311,7 @@ $(document).ready(function () {
                         //var numOfShares = Math.floor(user.investAmt / asteroidObj[i].sharePrice);
                         var numOfShares = Math.floor(user.investAmt / sharePriceArray[selectedAsteroid]);
                         //console.log("#shares = " + numOfShares);
-                        $("#insufficientFunds").text(numOfShares+" shares invested");
+                        $("#insufficientFunds").text(numOfShares + " shares invested");
                     }
                 } else { }
             }
@@ -336,7 +365,7 @@ $(document).ready(function () {
         //change graph size
         height: 400,
         width: 480,
-        
+
         xaxis: {
             title: 'Accessibility Factor (CAF)',
         },
