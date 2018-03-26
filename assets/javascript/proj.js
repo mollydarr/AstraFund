@@ -254,8 +254,6 @@ $(document).ready(function () {
 
             $("<td scope='col'>").text(userInvestData[k].spectra).appendTo(newRow);
 
-            $("<td scope='col'>").text(userInvestData[k].spectra).appendTo(newRow);
-
             $("<td scope='col'>").text("$"+userInvestData[k].investAmt).appendTo(newRow);
 
             $("#userInvest").append(newRow);
