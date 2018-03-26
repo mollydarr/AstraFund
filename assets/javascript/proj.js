@@ -256,7 +256,7 @@ $(document).ready(function () {
 
             $("<td scope='col'>").text("$"+userInvestData[k].investAmt).appendTo(newRow);
 
-            $("#userInvest").append(newRow);
+            $("#investDash").append(newRow);
 
         }
     }
