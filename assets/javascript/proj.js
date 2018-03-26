@@ -237,7 +237,7 @@ $(document).ready(function () {
     }
 
     function userData(snapshot) {
-        //$("#investDash").empty();
+        $("#investDash").empty();
 
         var userInvestData = snapshot.val();
         console.log(userInvestData);
